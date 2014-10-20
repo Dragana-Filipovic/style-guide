@@ -1,0 +1,34 @@
+@import 'style/variables';
+@import 'style/blocks/icon';
+
+.tagline {
+  font-size: @font-size-small;
+}
+
+.tagline__switch {
+  .icon;
+  .icon--switch;
+
+  position: relative;
+  top: 2px;
+
+  margin-left: 2px;
+  margin-right: -5px;
+
+  color: transparent;
+
+  &::before {
+    color: @color-ui-beta;
+  }
+}
+
+.tagline__subject {
+  color: @color-ui-epsilon;
+  font-style: normal;
+}
+
+.tagline__predicate {
+  color: @color-ui-epsilon;
+  font-weight: bold;
+  font-style: normal;
+}
