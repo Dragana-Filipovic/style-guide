@@ -35,17 +35,21 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-width="1280"
+     inkscape:window-height="962"
      id="namedview4138"
      showgrid="true"
-     inkscape:zoom="0.417193"
-     inkscape:cx="125.58197"
-     inkscape:cy="1126.0809"
+     inkscape:zoom="0.295"
+     inkscape:cx="807.27694"
+     inkscape:cy="422.46703"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4124">
+     inkscape:current-layer="Icons"
+     inkscape:snap-bbox="true"
+     inkscape:snap-global="false"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
        id="grid4142"
@@ -55,6 +59,10 @@
        snapvisiblegridlinesonly="true"
        spacingx="128px"
        spacingy="128px" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-400,-256"
+       id="guide2988" />
   </sodipodi:namedview>
   <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
   <title
@@ -68,21 +76,12 @@
      sketch:type="MSPage"
      style="fill:none;stroke:none"
      transform="matrix(25.108936,0,0,25.108936,-215.923,30.019522)">
-    <g
-       id="switch"
-       sketch:type="MSArtboardGroup"
-       style="fill:#000000">
-      <g
-         sketch:type="MSLayerGroup"
-         transform="translate(14,9)"
-         id="g4134">
-        <path
-           d="m 72.302765,81.564588 -9.276471,0 L 0,0 9.4864118,0 72.302765,81.564588 z"
-           sketch:type="MSShapeGroup"
-           transform="matrix(-1,0,0,1,72,0)"
-           id="path4136"
-           inkscape:connector-curvature="0" />
-      </g>
-    </g>
+    <path
+       style="fill:#000000"
+       d="m 3.5016617,100.76016 13.9510333,0 59.042951,-76.466806 -14.148242,0 z"
+       sketch:type="MSShapeGroup"
+       id="path4136"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>
