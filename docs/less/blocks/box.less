@@ -1,10 +1,14 @@
+@import 'style/variables';
+
 .box {
-  &.box--docs.box--grid {
-    background-color: #eff4f9;
-    border: 1px solid #cadceb;
-    padding-left: 8.75px;
-    padding-right: 8.75px;
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
-  }
+  display: block;
+
+  width: 100%;
+  min-height: 1px;
+
+  padding: (@grid-gutter-width / 2);
+  margin: 10px 0;
+
+  color: @color-ui-alpha;
+  background-color: @color-ui-zeta;
 }

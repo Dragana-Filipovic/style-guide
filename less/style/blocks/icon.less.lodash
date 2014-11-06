@@ -2,8 +2,8 @@
 
 @import 'style/variables';
 
-@path: @sg-icon-font-path;
-@name: @sg-icon-font-name;
+@path: @icon-font-path;
+@name: @icon-font-name;
 
 @font-face {
   font-family: '@{name}';
@@ -17,6 +17,9 @@
 }
 
 .icon {
+  text-decoration: none; // prevent some odd underline in IE
+
+  &:before, // Keep the :before for IE8 support
   &::before {
     display: inline-block;
     font: normal normal normal 14px/1 '@{name}';
@@ -35,15 +38,37 @@
 }
 <% }); %>
 
+.make-color(@color) {
+  &,
+  &:hover {
+    color: @color;
+  }
+}
 
 .icon--twitter {
-  color: #55acee;
+  .make-color(#55acee);
 }
 
 .icon--facebook {
-  color: #3d539e;
+  .make-color(#3d539e);
 }
 
 .icon--github {
-  color: black;
+  .make-color(#333333);
+}
+
+.icon--youtube {
+  .make-color(#ca272c);
+}
+
+.icon--google-plus {
+  .make-color(#bb3627);
+}
+
+.icon--linked-in {
+  .make-color(#007bb6);
+}
+
+.icon--xing {
+  .make-color(#00605e);
 }

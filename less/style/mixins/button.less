@@ -1,0 +1,32 @@
+@import 'style/blocks/icon';
+
+.make-button-size(@height, @pad-lr, @border-radius, @icon-pad, @icon-size, @font-size, @line-height: 1.5) {
+  // TODO: we may support @line-height in pixel or em using css guards
+  @calculated-line-height: @font-size * @line-height;
+
+  font-size: @font-size;
+
+  line-height: @line-height;
+  padding: ((@height - @calculated-line-height) / 2) @pad-lr;
+
+  border: none;
+  border-radius: @border-radius;
+
+  &.icon::before {
+    margin-right: @icon-pad;
+    font-size: @icon-size;
+    display: inline;
+  }
+}
+
+.make-button-color(@bg-color, @color, @hover-bg-color: @bg-color, @hover-color: @color) {
+  background: @bg-color;
+  color: @color;
+
+  text-decoration: none;
+
+  &:hover {
+    background: @hover-bg-color;
+    color: @hover-color;
+  }
+}

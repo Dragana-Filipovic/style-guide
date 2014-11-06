@@ -3,8 +3,8 @@
 @respond-medium-min-width: 768px;
 @respond-large-min-width: 1024px;
 
-@sg-icon-font-path: '../fonts';
-@sg-icon-font-name: 'style-guide-font';
+@icon-font-path: '../fonts';
+@icon-font-name: 'style-guide-font';
 
 @font-size-base: 14px;
 @font-size-large: 16px;
@@ -13,6 +13,9 @@
 @transition-duration: 0.5s;
 
 @images-path: '../images';
+
+@grid-columns: 12;
+@grid-gutter-width: 20px;
 
 @transition-fn-fancy: cubic-bezier(0.6, 0.0, 0.735, 0.045);
 @transition-duration-fast: 250ms;

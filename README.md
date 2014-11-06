@@ -1,3 +1,5 @@
+[![Build Status](https://api.shippable.com/projects/544e872d44927f89db3df031/badge?branchName=master)](https://app.shippable.com/projects/544e872d44927f89db3df031/builds/latest)
+
 # AXA Switzerland Web Style Guide
 
 > The mobile-ready style guide for internal and external
@@ -42,7 +44,30 @@ $ gulp dev
 
 ## Feedback
 
-We love feedback! File an issue and we'll reach out to you.
+We love feedback! File an issue and we'll reach out to you. 
+
+## Contributing
+
+Do not hesitate, we appreciate every contribution. Do not fear non-perfect Pull Requests, nobody is perfect.
+
+When contributing please stick to the following guides:
+
+### Branching
+
+Please add every feature/bugfix in a separate branch and create a pull request to the master branch.
+
+We stick to the following naming conventions for branches:
+
+- ```feature/...``` for feature branches
+- ```bugfix/...``` for bugfix branches
+
+### Commit messages
+
+- Begin you commit message with a verb in the imperative. (E.g. ```introduce foo bar```, ```fix baz```, ...)
+- Try to have small, atomic commits.
+- First line of a commit message should sum up your changes and should not be longer than 50 characters.
+- Second line should be empty
+- Third and following lines can optionally contain a longer description
 
 ## Who's behind it?
 

@@ -12,6 +12,8 @@ module.exports = exports = function (options) {
 
   return function (cb) {
     var readJSONFile = require('../lib/readJSONFile');
+    var sampleJadeFilter = require('../lib/sampleJadeFilter');
+
     var Metalsmith = require('metalsmith');
     var collections = require('metalsmith-collections');
     var templates = require('metalsmith-templates');
@@ -24,6 +26,9 @@ module.exports = exports = function (options) {
     var assets = require('metalsmith-assets');
     var autoprefixer = require('metalsmith-autoprefixer');
 
+    // Jade filters
+    jade.registerFilter('sample', sampleJadeFilter);
+
     var metalsmith = new Metalsmith(options.cwd);
     metalsmith.source(options.src);
 
@@ -35,7 +40,8 @@ module.exports = exports = function (options) {
     // add metadata
     metalsmith.use(define({
       icons: readJSONFile(path.join(options.cwd, 'dist/icons.json')),
-      colors: readJSONFile(path.join(options.cwd, 'dist/colors.json'))
+      colors: readJSONFile(path.join(options.cwd, 'dist/colors.json')),
+      version: readJSONFile(path.join(options.cwd, 'dist/version.json'))
     }));
 
     // include fonts
@@ -63,7 +69,7 @@ module.exports = exports = function (options) {
     ].forEach(function (name) {
       // TODO: Remove when collection plugin supports undeclared collections
       var options = {};
-      options[name] = { sortBy: 'order', reverse: false };
+      options[name] = { sortBy: 'slug', reverse: false };
 
       metalsmith.use(branch(name + '/*.jade')
         .use(jade({ locals: metalsmith.metadata() }))

@@ -4,10 +4,10 @@ slug: footer
 collection: visuals
 ---
 
-.example
+:sample
   .footer
-    .footer__content.l-holder
-      .footer__content__inner.l-row
+    .footer__content-container
+      .footer__content.l-row
         .l-third
           h3 Keep In Touch
           ul.footer-menu
@@ -40,7 +40,7 @@ collection: visuals
             li.worldwide__item
               a.worldwide__link.worldwide__link--switzerland(href="#axa-ch", title="AXA Switzerland") AXA.ch
 
-    .footer__copyline.l-holder
+    .footer__copyline
       .footer__copyline__inner.l-row
         .l-full
           ul.copyline-menu
@@ -52,11 +52,3 @@ collection: visuals
               a.copyline-menu__link(href="#disclaimer") Disclaimer
             li.copyline-menu__item
               span.copyline-menu__text AXA 2014 ©
-
-
-pre.highlight.hljs
-  code.html
-    :highlight
-      <footer class="footer">
-        ...
-      </footer>
