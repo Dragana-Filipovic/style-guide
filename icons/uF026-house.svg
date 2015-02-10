@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   width="2048"
+   height="2048"
+   xml:space="preserve"
+   sodipodi:docname="uF026-house.svg"><metadata
+   id="metadata2991"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs2989" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1018"
+   id="namedview2987"
+   showgrid="false"
+   inkscape:zoom="0.19741644"
+   inkscape:cx="220.15617"
+   inkscape:cy="556.56841"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg2985" />
+     <path
+   d="M 1024,306.50806 0,1330.434 192.63366,1523.0677 1024.222,691.84939 1855.2923,1523.0677 2048,1330.582 1024,306.50806 z m -730.27622,1273.39504 0,673.5888 521.8796,0 0,-612.1651 416.71922,0 0,612.1651 521.9536,0 0,-673.7368 L 1024,849.70094 293.72378,1579.9031 z"
+   style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="path2997"
+   inkscape:connector-curvature="0" />
+</svg>

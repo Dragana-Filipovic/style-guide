@@ -1,0 +1,41 @@
+---
+title: Verträge
+description: Contract overview.
+thumbnail: contracts.png
+collection: examples
+filename: contracts.html
+template: examples/myaxa.jade
+---
+
+.l-container
+  h1.heading.heading--page Verträge
+  
+  .contract-tile
+    a(href='#').contract-tile__heading
+      span.contract-tile__heading__heading Haushaltsversicherung
+    .contract-tile__content
+      .contract-tile__key
+        .contract-tile__key__label 123.456.789
+      .contract-tile__info Status: in Kraft
+      .contract-tile__actions
+        a(href='#').contract-tile__actions__primary
+          span.contract-tile__actions__primary__label.icon--house Details
+        .contract-tile__actions__left
+          .contract-tile__actions__left__wrapper
+            a(href='#').contract-tile__actions__notifications.is-active 1
+            a(href='#').contract-tile__actions__secondary Schaden melden
+  .contract-tile
+    a(href='#').contract-tile__heading
+      span.contract-tile__heading__heading Superdupermegalangeversicherung die auch zwei oder drei Zeilen hat
+    .contract-tile__content
+      .contract-tile__key
+        .contract-tile__key__label Foo<br/>Bar
+      .contract-tile__info Status: sistiert
+      .contract-tile__actions
+        a(href='#').contract-tile__actions__primary
+          span.contract-tile__actions__primary__label.icon--car Details
+        .contract-tile__actions__left
+          .contract-tile__actions__left__wrapper
+            a(href='#').contract-tile__actions__notifications 0
+            a(href='#').contract-tile__actions__secondary Schaden melden
+  

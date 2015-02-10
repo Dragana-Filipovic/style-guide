@@ -1,0 +1,99 @@
+---
+filename: examples/master.jade
+---
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, minimum-scale=1.0, maximum-scale=1.0")
+    meta(name="description", content=config.description)
+    meta(name="keywords", content=config.keywords)
+    meta(name="author", content=config.author)
+    meta(name="robots", content="noindex")
+
+    title= title
+
+    link(rel="stylesheet", href=relative("/css/style.css"))
+
+    script(src=relative('/js/jquery/jquery.min.js'))
+    script(src=relative('/js/moment/moment.min.js'))
+    script(src=relative("/js/style.all.js"))
+
+  body.site
+    .site__page
+      .example-header
+        .example-header__sticky
+          a(href=relative("/examples")).example-header__back Back to overview
+          .example-header__headline Example
+        .example-header__text
+          p.paragraph.example-header__paragaph.
+            Dies ist eine Beispielseite mit Demo-Inhalten. 
+            <br /> Bitte besuchen Sie 
+            <a class="example-header__link" href="http://axa.ch" >www.axa.ch</a> 
+            für Ihre Versicherungsanliegen.
+          p.paragraph.example-header__paragaph.
+            This is an example page with demo content.
+            <br /> Please visit 
+            <a class="example-header__link" href="http://axa.ch" >www.axa.ch</a> 
+            for your insurance concerns.
+          p.paragraph.example-header__paragaph.
+            Ceci est un exemple de page avec du contenu de démonstration.
+            <br /> S'il vous plaît visitez 
+            <a class="example-header__link" href="http://axa.ch" >www.axa.ch</a> 
+            pour vos préoccupations d'assurance.
+          p.paragraph.example-header__paragaph.
+            Questa è una pagina di esempio con contenuti demo.
+            <br /> Si prega di visitare 
+            <a class="example-header__link" href="http://axa.ch" >www.axa.ch</a> 
+            per le vostre preoccupazioni di assicurazione.
+            
+      header.header.header--main
+        .l-container
+          .header__mobile-trigger(data-toggle='site-menu', data-target='.site')
+          a.header__brand.brand(href=relative("/"))
+            .brand__logo
+
+          .header__meta
+            .header__meta__upper
+              .header__meta__language
+                ul.menu.menu--language
+                  li.menu__item.is-active
+                    a(href='#').menu__link DE
+                  li.menu__item
+                    a(href='#').menu__link EN
+
+              .header__meta__menu
+                ul.menu.menu--meta
+                  li.menu__item
+                    a(href='../').menu__link Back to overview
+
+            .header__meta__lower
+              .header__meta__welcome
+                ul
+                  li.header__meta__welcome__item Example
+                  
+      .l-container
+        .main-nav
+          .menu.menu--main
+            .menu__item
+              .menu__link.is-active Verträge
+            .menu__item
+              .menu__link.is-active Postfach
+            .menu__item
+              .menu__link.is-active Profil
+
+      div!= contents
+
+      .hr
+
+      footer.footer
+        .footer__copyline
+          .footer__copyline__inner
+            .l-container
+              ul.copyline-menu
+                li.copyline-menu__item
+                  span.copyline-menu__text Copyright AXA Versicherungen AG 2015
+
+    .site__mobile-menu

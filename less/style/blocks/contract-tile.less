@@ -1,0 +1,235 @@
+@import "../variables.less";
+@import "../mixins/grid.less";
+@import "../mixins/clearfix.less";
+
+
+.make-contract-tile-side-padding() {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.contract-tile {
+  border: 1px solid @color-gray--light;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.contract-tile__heading {
+  .make-contract-tile-side-padding();
+  display: block;
+  height: 65px;
+  line-height: 65px;
+  overflow: hidden;
+  color: @color-blue;
+
+  &:hover {
+    color: @color-red;
+  }
+
+  .respond(medium, {
+    height: 55px;
+    line-height: 55px;
+  });
+}
+
+.contract-tile__heading__heading {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 65px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  font-size: 21px;
+}
+
+.contract-tile__content {
+  &:extend(.clearfix all);
+
+  .respond(medium, {
+    border-top: 1px solid @color-gray--light;
+  });
+}
+
+.contract-tile__key {
+  .make-contract-tile-side-padding();
+  height: 65px;
+  line-height: 65px;
+  background: @color-gray--lighter;
+  font-weight: bold;
+  color: black;
+  overflow: hidden;
+  .icon();
+  .icon--label();
+
+  .respond(medium; {
+    float: left;
+    height: 55px;
+    line-height: 55px;
+    background: transparent;
+  });
+
+  &:before {
+    color: @color-blue-gray--light;
+    line-height: 65px;
+    position: absolute;
+    font-size: 24px;
+
+    .respond(medium; {
+      line-height: 55px;
+    });
+  }
+}
+
+.contract-tile__key__label {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-left: 46px;
+  font-size: 16px;
+  font-weight: bold; // TODO Medium for franklin
+}
+
+.contract-tile__info {
+  .make-contract-tile-side-padding();
+  height: 93px;
+  padding-top: 13px;
+  font-size: 14px;
+  color: black;
+
+  .respond(medium; {
+    float: left;
+    height: 55px;
+    line-height: 55px;
+    padding-top: 0;
+  });
+}
+
+.contract-tile__actions {
+  &:extend(.clearfix all);
+
+  .respond(medium; {
+    float: right;
+    border-right: 1px solid @color-gray--light;
+  });
+}
+
+.contract-tile__actions__primary {
+  display: block;
+  float: right;
+  width: 100px;
+  height: 80px; // TODO: hack for 100% height
+  line-height: 80px;
+  background: @color-blue;
+
+  .respond(medium; {
+    height: 55px;
+    width: auto;
+    line-height: 55px;
+    padding-left: 35px;
+    padding-right: 35px;
+  });
+}
+
+.contract-tile__actions__primary__label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  .icon();
+  color: white;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 13px;
+
+  .respond(medium; {
+    display: inline-block;
+    height: 55px;
+    line-height: 55px;
+  });
+
+  &:before {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+
+    .respond(medium; {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 10px;
+      position: relative;
+      top: 3px;
+    });
+  }
+}
+
+.contract-tile__actions__left {
+  width: auto;
+  height: 80px; // TODO: hack for 100% height
+  .make-contract-tile-side-padding();
+  overflow: hidden;
+  border-top: 1px solid @color-gray--light;
+  padding-top: 5px;
+  line-height: 74px;
+
+  .respond(medium; {
+    border-top: none;
+    padding-top: 0;
+    padding-right: 40px;
+    padding-left: 40px;
+    height: 55px;
+    line-height: 55px;
+    border-left: 1px solid @color-gray--light;
+  });
+}
+
+.contract-tile__actions__left__wrapper {
+  display: inline-block;
+  line-height: 1.5;
+  vertical-align: middle;
+
+  .respond(medium; {
+    display: block;
+    float: left;
+  });
+}
+
+.contract-tile__actions__notifications {
+  display: block;
+  .icon();
+  .icon--message();
+  margin-bottom: 8px;
+  overflow: hidden;
+  color: black;
+
+  font-weight: bold;
+
+  .respond(medium; {
+    float: left;
+    padding-right: 40px;
+    height: 55px;
+    line-height: 55px;
+    margin-bottom: 0;
+  });
+
+  &::before {
+    color: @color-gray--mid;
+    margin-right: 5px;
+    font-size: 18px;
+  }
+
+  &.is-active::before {
+    color: @color-light-blue;
+  }
+}
+
+.contract-tile__actions__secondary {
+  display: block;
+  text-transform: uppercase;
+  color: @color-light-blue;
+
+  .respond(medium; {
+    float: left;
+    height: 55px;
+    line-height: 55px;
+  });
+}
