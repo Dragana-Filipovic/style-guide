@@ -12,6 +12,11 @@
   border: 1px solid @color-gray--light;
   box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+  background: white;
+}
+
+.contract-tile--last {
+  margin-bottom: 0;
 }
 
 .contract-tile__heading {
@@ -170,6 +175,7 @@
   border-top: 1px solid @color-gray--light;
   padding-top: 5px;
   line-height: 74px;
+  font-size: 13px;
 
   .respond(medium; {
     border-top: none;
@@ -205,7 +211,6 @@
 
   .respond(medium; {
     float: left;
-    padding-right: 40px;
     height: 55px;
     line-height: 55px;
     margin-bottom: 0;
@@ -231,5 +236,6 @@
     float: left;
     height: 55px;
     line-height: 55px;
+    padding-left: 40px;
   });
 }
