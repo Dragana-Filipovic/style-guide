@@ -22,8 +22,8 @@
 .contract-tile__heading {
   .make-contract-tile-side-padding();
   display: block;
-  height: 65px;
-  line-height: 65px;
+  height: 80px;
+  line-height: 80px;
   overflow: hidden;
   color: @color-blue;
 
@@ -38,24 +38,122 @@
 }
 
 .contract-tile__heading__heading {
-  display: inline-block;
+  /*display: inline-block;
   vertical-align: middle;
-  max-height: 65px;
-  width: 100%;
+  max-height: 80px;
+  width: 100%;*/
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.4;
+  //line-height: 1.4;
   font-size: 21px;
 }
 
-.contract-tile__content {
+.contract-tile__heading__icon {
+  float: left;
+  width: 47px;
+
+  &::before {
+    font-size: 32px;
+  }
+}
+
+.contract-tile__lower {
   &:extend(.clearfix all);
 
-  .respond(medium, {
+  .respond(medium; {
     border-top: 1px solid @color-gray--light;
   });
 }
 
+.contract-tile__content {
+  .make-contract-tile-side-padding();
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: @color-gray--lighter;
+  border-bottom: 1px solid @color-gray--light;
+  color: black;
+
+  .respond(medium; {
+    background: transparent;
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    float: left;
+  });
+}
+
+.contract-tile__content__item {
+  padding: 10px 0;
+
+  .respond(medium; {
+    display: inline-block;
+    margin-right: 40px;
+    line-height: 40px;
+  });
+}
+
+.contract-tile__content__item__label {
+  display: inline-block;
+
+  &::after {
+    content: ': ';
+    display: inline-block;
+  }
+}
+
+.contract-tile__content__item__value {
+  display: inline-block;
+}
+
+.contract-tile__content__item__value--primary {
+  font-weight: bold;
+}
+
+.contract-tile__actions {
+  &:extend(.clearfix all);
+
+  .respond(medium; {
+    float: right;
+    border-left: 1px solid @color-gray--light;
+  });
+}
+
+.contract-tile__actions__action {
+  .make-contract-tile-side-padding();
+  .icon-after();
+  .icon-after--arrow-right();
+  height: 50px;
+  line-height: 50px;
+
+  .respond(medium; {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+  });
+
+  &::after {
+    float: right;
+    font-size: 16px;
+    line-height: inherit;
+    padding-left: 20px;
+
+    .respond(medium; {
+      display: none;
+    });
+  }
+}
+
+.contract-tile__actions__action--primary {
+  background: white;
+  color: @color-blue;
+}
+
+.contract-tile__actions__action--secondary {
+  background: @color-blue;
+  color: white;
+}
+
+/*
 .contract-tile__key {
   .make-contract-tile-side-padding();
   height: 65px;
@@ -239,3 +337,5 @@
     padding-left: 40px;
   });
 }
+
+*/

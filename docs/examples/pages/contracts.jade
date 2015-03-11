@@ -13,31 +13,32 @@ template: examples/myaxa.jade
 .section.section--highlight
   .l-container
     .contract-tile
-      a(href='#').contract-tile__heading
-        span.contract-tile__heading__heading Haushaltsversicherung
-      .contract-tile__content
-        .contract-tile__key
-          .contract-tile__key__label 123.456.789
-        .contract-tile__info Status: in Kraft
+      .contract-tile__heading
+        .contract-tile__heading__icon.icon.icon--home
+        .contract-tile__heading__heading Haushaltsversicherung
+      .contract-tile__lower
+        .contract-tile__content
+          .contract-tile__content__item
+            .contract-tile__content__item__label Policennummer
+            .contract-tile__content__item__value.contract-tile__content__item__value--primary 123.567.456
+          .contract-tile__content__item
+            .contract-tile__content__item__label Status
+            .contract-tile__content__item__value in Kraft
         .contract-tile__actions
-          a(href='#').contract-tile__actions__primary
-            span.contract-tile__actions__primary__label.icon--house Details
-          .contract-tile__actions__left
-            .contract-tile__actions__left__wrapper
-              a(href='#').contract-tile__actions__notifications.is-active 1
-              a(href='#').contract-tile__actions__secondary Schaden melden
-    .contract-tile.contract-tile--last
-      a(href='#').contract-tile__heading
-        span.contract-tile__heading__heading Superdupermegalangeversicherung die auch zwei oder drei Zeilen hat
-      .contract-tile__content
-        .contract-tile__key
-          .contract-tile__key__label Foo<br/>Bar
-        .contract-tile__info Status: sistiert
+          .contract-tile__actions__action.contract-tile__actions__action--primary Schaden melden
+          .contract-tile__actions__action.contract-tile__actions__action--secondary Vertragsdetails      
+    .contract-tile
+      .contract-tile__heading
+        .contract-tile__heading__icon.icon.icon--home
+        .contract-tile__heading__heading Haushaltsversicherung
+      .contract-tile__lower
+        .contract-tile__content
+          .contract-tile__content__item
+            .contract-tile__content__item__label Policennummer
+            .contract-tile__content__item__value.contract-tile__content__item__value--primary 123.567.456
+          .contract-tile__content__item
+            .contract-tile__content__item__label Status
+            .contract-tile__content__item__value in Kraft
         .contract-tile__actions
-          a(href='#').contract-tile__actions__primary
-            span.contract-tile__actions__primary__label.icon--car Details
-          .contract-tile__actions__left
-            .contract-tile__actions__left__wrapper
-              a(href='#').contract-tile__actions__notifications 0
-              a(href='#').contract-tile__actions__secondary Schaden melden
-    
+          .contract-tile__actions__action.contract-tile__actions__action--primary Schaden melden
+          .contract-tile__actions__action.contract-tile__actions__action--secondary Vertragsdetails
