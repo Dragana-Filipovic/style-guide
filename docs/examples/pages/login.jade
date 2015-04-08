@@ -1,0 +1,41 @@
+---
+title: Login
+description: MyAXA Login
+thumbnail: login.png
+collection: examples
+filename: login.html
+template: examples/master.jade
+---
+
+.login
+  .login__register-and-login
+    .login__upper
+      .login__login
+        .login__welcome Willkommen bei myAXA
+        .login__form
+          .login__form__inner
+            .login__form__inner__inner
+              .login__form__headline Login für Kunden
+              .login__form__email
+                input(type='text', placeholder='E-Mail-Adresse').control.control--input.login__form__email__input
+              .login__form__password
+                .login__form__password__control.control-group
+                  input(type='password', placeholder='Password').login__form__password__control__input.control-group__control.control
+                  .login__form__password__control__toggle.control-group__addon.control-group__addon--show-hide(onclick='$(this).toggleClass("is-active")')
+                .login__form__password__lost
+                  a.login__form__password__lost__link Passwort vergessen?
+              .login__form__submit
+                a.button.button--primary.login__form__submit__button Einloggen
+      a.login__scroll-indicator Neu hier?
+    .login__register
+      .login__register__headline Registrierung für myAXA
+      .login__register__teaser Das Kundenportal der AXA
+      ul.login__register__benefits
+        li.login__register__benefits__benefit Überblick über Ihre Verträge und Daten
+        li.login__register__benefits__benefit Einfach Schaden melden
+        li.login__register__benefits__benefit Rund um die Uhr verfügbar
+        li.login__register__benefits__benefit Schnell und unkompliziert
+      .login__register__cta Jetzt registrieren
+  .login__activate
+    .login__activate__teaser Sobal Sie einen aktivierungscode per Post erhalten haben, aktivieren Sie jetzt den Zugang.
+    .login__activate__cta Zugang aktivieren

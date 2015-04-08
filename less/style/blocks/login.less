@@ -1,0 +1,318 @@
+@import '../variables';
+@import '../grid';
+@import '../blocks/control';
+@import '../blocks/control-group';
+@import '../blocks/icon';
+@import '../mixins/respond';
+
+.login {
+  background: @color-gray--lighter;
+  overflow: auto;
+
+  .respond(medium, {
+    background: transparent;
+  })
+}
+
+.login__register-and-login {
+  overflow: auto; // prevent margin overflow
+
+  .respond(medium, {
+    position: relative;
+    padding-top: 65px; // overlayed by absolute positioned .login_form
+    background: url("@{images-path}/../examples/pages/login_desktop.png") center top no-repeat transparent;
+  });
+}
+
+.login__upper {
+  .l-container();
+
+  padding-top: 15px;
+
+  overflow: auto; // prevent margin overflow
+
+  background: url("@{images-path}/../examples/pages/login_mobile.png") center top no-repeat transparent;
+
+  .respond(medium, {
+    background: transparent;
+  })
+}
+
+.login__login {
+  .l-container();
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  background: rgba(0, 0, 0, .5);
+
+  .respond(medium, {
+    padding: 0;
+    width: auto;
+    max-width: none;
+    background: transparent;
+  })
+}
+
+.login__welcome {
+  margin: 3px 0 0 0;
+  color: white;
+  font-size: 24px;
+
+  .respond(medium, {
+    margin-top: 35px;
+    color: @color-blue;
+    font-size: 38px;
+  });
+}
+
+.login__form {
+  .respond(medium, {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    overflow: hidden;
+    background: rgba(0,0,0,.5);
+  })
+}
+
+.login__form__inner {
+  .respond(medium, {
+    .l-container();
+  })
+}
+
+.login__form__inner__inner {
+  .respond(medium, {
+    float: right;
+    padding-top: 10px;
+  });
+}
+
+.login__form__headline {
+  &:extend(.clearfix all);
+  display: none;
+  float: left;
+  margin: 8px 0;
+  color: white;
+  font-size: 16px;
+
+  .respond(medium, {
+    display: block;
+  });
+}
+
+.login__form__email,
+.login__form__password,
+.login__form__submit {
+  margin: 10px 0;
+
+  .respond(medium, {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+  });
+}
+
+.login__form__email__input {
+  .respond(medium, {
+    .control--inline();
+  });
+}
+
+.login__form__submit {
+  margin-bottom: 0;
+}
+
+.login__form__submit__button {
+  display: block;
+
+  .respond(medium, {
+    //.make-button-size(
+    //  @height: 40px;
+    //  @pad-lr: @button-pad-lr--medium;
+    //  @icon-size: @button-icon-size;
+    //  @font-size: @button-font-size--medium;
+    //);
+  });
+}
+
+.login__form__password__control {
+  .respond(medium, {
+    .control-group--inline();
+  });
+}
+
+.login__form__password__control__input {
+  .control--input();
+}
+
+.login__form__password__lost {
+  text-align: right;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.login__form__password__lost__link {
+  text-transform: uppercase;
+  color: white;
+}
+
+.login__activate {
+  .l-container();
+  &:extend(.clearfix all);
+  margin-bottom: 15px;
+
+  .respond(medium, {
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  })
+}
+
+.login__activate__teaser {
+  display: none;
+
+  .respond(medium, {
+    .icon();
+    .icon--burger();
+
+    display: inline-block;
+    margin-right: 15px;
+
+  &::before {
+    color: @color-gray;
+    font-size: 42px;
+    position: relative;
+    top: 8px; // TODO
+  }
+  });
+}
+
+.login__activate__cta {
+  .button();
+  .button--secondary();
+  display: block;
+
+  .respond(medium, {
+    display: inline-block;
+  });
+}
+
+.login__register {
+  margin: 15px 10px;
+  padding: 15px;
+  background: white;
+
+  .respond(medium, {
+    .l-container();
+    background: transparent;
+  });
+}
+
+.login__register__cta {
+  .button();
+  display: block;
+
+  .make-button-color(
+  @bg-color: @color-red;
+  @color: white;
+  @highlight-bg-color: @color-red;
+  );
+
+  .respond(medium, {
+    display: inline-block;
+  });
+}
+
+.login__scroll-indicator {
+  .icon-after();
+  .icon-after--arrow-bottom();
+
+  display: block;
+  margin: 80px 0 25px 0;
+  padding: 10px 0 10px 0;
+  color: @color-blue;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+
+  &::after {
+    display: block;
+    text-align: center;
+    color: @color-blue;
+    font-size: 28px;
+  }
+
+  &:hover {
+    color: @color-red;
+
+    &::after {
+      color: @color-red;
+    }
+  }
+
+  .respond(medium, {
+    display: none;
+  })
+}
+
+.login__register__headline {
+  margin: 1px 0 0 0;
+  font-size: 22px;
+  color: @color-blue;
+
+  .respond(medium, {
+    margin-top: 17px;
+    font-size: 26px;
+  })
+}
+
+.login__register__teaser {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 13px 0;
+
+  .respond(medium, {
+    font-size: 15px;
+    margin-top: 16px;
+    margin-bottom: 6px;
+  });
+}
+
+.login__register__benefits {
+  margin: 0;
+  padding: 0 0 10px 0;
+  list-style-type: none;
+  overflow: auto; // prevent margin stacking
+
+  .respond(medium, {
+    padding-bottom: 22px;
+  });
+}
+
+.login__register__benefits__benefit {
+  .icon();
+  .icon--github();
+
+  position: relative;
+  margin: 9px 0 0 0;
+  padding: 0 0 0 27px;
+  font-size: 15px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    color: @color-light-blue--light;
+  }
+
+  .respond(medium, {
+    margin-top: 10px;
+  })
+}
+
+/* Copyright AXA Versicherungen AG 2015 */
