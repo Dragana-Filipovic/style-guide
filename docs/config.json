@@ -69,5 +69,8 @@
   },{
     "name": "jQuery Plugins",
     "pattern": "development/plugins/*"
+  },{
+    "name": "ng directives",
+    "pattern": "development/directives/*"
   }]
 }
