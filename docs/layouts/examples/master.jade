@@ -56,25 +56,27 @@ html
           .header__mobile-trigger(data-toggle='site-menu', data-target='.site')
           a.header__brand.brand(href=relative("/"))
             .brand__logo
-
           .header__meta
             .header__meta__upper
+              .header__meta__action
+                .header__action
+                  a.menu__link.header__action__button Logout
               .header__meta__language
                 ul.menu.menu--language
                   li.menu__item.is-active
                     a.menu__link DE
                   li.menu__item
-                    a.menu__link EN
-
-              .header__meta__menu
-                ul.menu.menu--meta
+                    a.menu__link FR
                   li.menu__item
-                    a(href='../').menu__link Back to overview
-
+                    a.menu__link IT
+                  li.menu__item
+                    a.menu__link EN
             .header__meta__lower
               .header__meta__welcome
-                ul
-                  li.header__meta__welcome__item Example
+                div
+                  .header__meta__welcome__main Welcome to AXA
+                  .header__meta__welcome__secondary
+                    a(href='tel:0800809809') 0800 809 809
 
       div!= contents
 
