@@ -4,7 +4,11 @@
 }
 
 .paragraph--large {
-  font-size: @font-size-large;
+  font-size: @font-size-large-fallback;
+
+  .has-webfont & {
+    font-size: @font-size-large;
+  }
 }
 
 /* Copyright AXA Versicherungen AG 2015 */

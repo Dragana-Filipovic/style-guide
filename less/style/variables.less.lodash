@@ -24,6 +24,10 @@
 @font-weight-medium: 600;
 @line-height: 1.375;
 @font-color: @color-gray--darkest;
+@font-size-fallback: 15px;
+@font-size-small-fallback: 0.8667em;
+@font-size-large-fallback: 1.1333em;
+@line-height-fallback: 1.4666;
 
 // #############################
 // # Transitions

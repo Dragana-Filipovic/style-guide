@@ -94,6 +94,10 @@ p code {
 
   border-radius: 3px;
 
-  font-size: @font-size-small;
+  font-size: @font-size-small-fallback;
+
+  .has-webfont & {
+    font-size: @font-size-small;
+  }
 }
 /* Copyright AXA Versicherungen AG 2015 */

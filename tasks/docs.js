@@ -32,6 +32,7 @@ module.exports = exports = function (options) {
     var relative = require('metalsmith-relative');
     var postcss = require('metalsmith-postcss');
     var pseudoelements = require('postcss-pseudoelements');
+    var metalsmithStatic = require('metalsmith-static');
 
     var config = readJSONFile(path.join(options.src, 'config.json'));
 
@@ -76,6 +77,10 @@ module.exports = exports = function (options) {
     }));
 
     // include js libs
+    metalsmith.use(metalsmithStatic({
+      src: './node_modules/fontfaceobserver/fontfaceobserver.standalone.js',
+      dest: './js/fontfaceobserver/fontfaceobserver.standalone.js'
+    }));
     metalsmith.use(assets({
       source: './node_modules/jquery/dist',
       destination: './js/jquery'

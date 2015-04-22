@@ -57,11 +57,15 @@
     border: 1px solid @color-tbd-6;
 
     text-align: center;
-    font-size: @font-size-small;
+    font-size: @font-size-small-fallback;
     line-height: 20px;
 
     background-color: @color-tbd-5;
     color: @color-gray--darkest;
+
+    .has-webfont & {
+      font-size: @font-size-small;
+    }
 
     &:hover {
       background-color: white;

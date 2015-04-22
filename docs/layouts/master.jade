@@ -22,7 +22,6 @@ html
     meta(name="author", content=config.author)
 
     title #{title} | Web Design Guide
-    link(rel="stylesheet", href="http://fast.fonts.net/cssapi/1da4c08a-73a4-4e34-8997-1c1eeb1a8cca.css")
     link(rel="stylesheet", href=relative("/css/docs.css"))
 
     script(src=relative('/js/jquery/jquery.min.js'))
@@ -31,6 +30,9 @@ html
     script(src=relative('/js/localforage/localforage.min.js'))
     script(src=relative('/js/moment/moment.min.js'))
     script(src=relative('/js/zeroclipboard/ZeroClipboard.min.js'))
+    script(src=relative('/js/fontfaceobserver/fontfaceobserver.standalone.js'))
+
+    script(src='http://fast.fonts.net/jsapi/1da4c08a-73a4-4e34-8997-1c1eeb1a8cca.js', async)
 
     script(type='text/javascript').
       // Include the UserVoice JavaScript SDK (only needed once on a page)
@@ -54,6 +56,7 @@ html
     script(src=relative("/js/main.js"))
     script(src=relative("/js/left-navigation.js"))
     script(src=relative("/js/octocat.js"))
+    script(src=relative("/js/webfont.js"))
 
   body.site
     .site__page

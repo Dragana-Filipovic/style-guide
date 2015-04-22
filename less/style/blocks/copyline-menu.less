@@ -37,8 +37,14 @@
     height: auto;
 
     line-height: 30px;
-    font-size: @font-size-small;
+    font-size: @font-size-small-fallback;
   });
+
+  .has-webfont & {
+    .respond(medium, {
+      font-size: @font-size-small;
+    });
+  }
 }
 
 .copyline-menu__link {

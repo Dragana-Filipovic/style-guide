@@ -25,7 +25,11 @@
 
 .menu--left {
   display: block;
-  font-size: 0.9em;
+  font-size: @font-size-small-fallback;
+
+  .has-webfont & {
+    font-size: @font-size-small;
+  }
 
   .menu__item {
     display: block;
@@ -272,7 +276,6 @@
     display: block;
 
     font-size: 14px;
-    font-family: "Conv_ITCFranklinGothicStd-MdCd", sans-serif;
     text-decoration: none;
 
     color: @color-gray--darker;

@@ -1,7 +1,7 @@
 ---
 title: Recommendations
 template: development.jade
-order: 6
+order: 7
 ---
 
 > Please note that these recommendations are a working draft.

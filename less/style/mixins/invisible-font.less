@@ -6,9 +6,14 @@
 }
 
 .undo-invisible-font {
-  font-size: @font-size; // 8 IE Fallback
+  font-size: @font-size-fallback; // IE 8 Fallback
   font-size: 1rem;
   color: @font-color;
+
+  .has-webfont & {
+    font-size: @font-size; // IE 8 Fallback
+    font-size: 1rem;
+  }
 }
 
 /* Copyright AXA Versicherungen AG 2015 */
