@@ -1,13 +1,21 @@
 .paragraph {
   max-width: 700px;
-  margin: .7em 0;
+  margin: .7em * unit(@font-size / @font-size-fallback) 0;
+
+  .has-webfont & {
+    margin: .7em 0;
+  }
 }
 
 .paragraph--large {
   font-size: @font-size-large-fallback;
+  line-height: @line-height * unit(@font-size-large / @font-size-large-fallback);
+  margin: .7em * unit(@font-size-large / @font-size-large-fallback) 0;
 
   .has-webfont & {
     font-size: @font-size-large;
+    line-height: @line-height;
+    margin: .7em 0;
   }
 }
 

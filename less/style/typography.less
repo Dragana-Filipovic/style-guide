@@ -1,11 +1,11 @@
 @import './variables';
 
 body {
-  color: @font-color;
-  font-family: Arial, sans-serif;
-  font-size: @font-size-fallback;
-  line-height: @line-height-fallback;
-}
+   color: @font-color;
+   font-family: Arial, sans-serif;
+   font-size: @font-size-fallback;
+   line-height: @line-height * unit(@font-size / @font-size-fallback);
+ }
 
 .has-webfont {
   font-family: "ITC Franklin Gothic W01", Arial, sans-serif;

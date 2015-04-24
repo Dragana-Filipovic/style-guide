@@ -48,12 +48,39 @@ This requires the Promise API (you may use a [polyfill](https://www.npmjs.com/pa
 
 # Make use of progressive enhancement in your own CSS/LESS
 
-Use the global `has-webfont` modifier. See the example below, extracted from the typography section of the AXA Web Style Guide:
+Use the global `has-webfont` modifier. See the examples below, extracted from the typography and paragraph section of the AXA Web Style Guide:
 
-```css
-TBD
+<div class="callout callout--danger" >
+Please bear in mind that any sizes relative to the font-size (em, line-height) change when you modify the font-size. To prevent any ugly behaviour on FOUT, also modify any sizes relative to the font-size.
+</div>
+
+```less
+body {
+   color: @font-color;
+   font-family: Arial, sans-serif;
+   font-size: @font-size-fallback;
+   line-height: @line-height * unit(@font-size / @font-size-fallback);
+ }
+
+.has-webfont {
+  font-family: "ITC Franklin Gothic W01", Arial, sans-serif;
+  font-size: @font-size;
+  line-height: @line-height;
+}
 ```
 
+<p class="paragraph" ></p>
 
+```less
+.paragraph--large {
+  font-size: @font-size-large-fallback;
+  line-height: @line-height * unit(@font-size-large / @font-size-large-fallback);
+
+  .has-webfont & {
+    font-size: @font-size-large;
+    line-height: @line-height;
+  }
+}
+```
 
 <!-- Copyright AXA Versicherungen AG 2015 -->
