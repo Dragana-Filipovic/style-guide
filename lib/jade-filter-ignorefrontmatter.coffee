@@ -1,9 +1,13 @@
 hljs = require('highlight.js')
 fm = require('front-matter')
 
+path = require('path')
+extend = require('extend')
+
 # Simple 'fallback' for metalsmith-relative
 relative = (to) ->
-  to
+  from = path.dirname('/docs/page');
+  return path.relative(from, to);
 
 module.exports = (jadeLang, jadeRuntime, jadeFilters) ->
   (text, options) ->
