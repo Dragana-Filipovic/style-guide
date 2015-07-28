@@ -2,8 +2,8 @@ hljs = require('highlight.js')
 fm = require('front-matter')
 
 path = require('path')
-extend = require('extend')
 
+# TODO: Find real solution for the problem with relative
 # Simple 'fallback' for metalsmith-relative
 relative = (to) ->
   from = path.dirname('/docs/page');
