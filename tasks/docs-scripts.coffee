@@ -18,7 +18,10 @@ module.exports = ->
         './node_modules/svg4everybody/svg4everybody.js'
         './node_modules/lunr/lunr.min.js' # use min here since non-minified version misses a semicolon at the end
         './node_modules/iframe-resizer/src/iframeResizer.js'
+        './node_modules/bootstrap/js/dropdown.js'
+        './node_modules/bootstrap-select/js/bootstrap-select.js'
         './dist/jquery/axa-wsg.jquery.all.js'
+        './dist/modernizr/modernizr.custom.js'
         './docs/js/**/*.coffee'
       ]
     .pipe gIf('**/*.coffee', coffee())

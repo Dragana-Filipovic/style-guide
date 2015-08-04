@@ -7,33 +7,13 @@
     constructor: (element, options) ->
       @$element = $ element
 
-      # TODO: Do not depend on css classes
-      @$label = @$element.find '.dropdown__label'
-      @$select = @$element.find '.dropdown__select'
-
       @options = $.extend {}, Dropdown.DEFAULTS, options
 
       @init()
 
     init: () ->
-      @$select.attr 'tabindex', '-1'
-      @$element.attr 'tabindex', '0'
-
-      @$element.addClass 'dropdown--js'
-
-      @setLabelText()
-
-      @$select.on 'change', @setLabelText
-
-      @$element.on 'keydown', @handleKeyDown
-
-    # Handle spacebar to open the select box
-    handleKeyDown: (e) =>
-      if e.which == 32
-        @$select.focus()
-
-    setLabelText: () =>
-      @$label.text @$select.find('option:selected').text()
+      if !Modernizr.touchevents && typeof $.fn.selectpicker != 'undefined'
+        @$element.selectpicker(@options)
 
   # Plugin definition
   Plugin = (option) ->
@@ -53,7 +33,7 @@
   $.fn.dropdown.Constructor = Dropdown
 
   # DATA-API
-  $(window).on 'load', () ->
+  $(document).on 'ready', () ->
     $('[data-dropdown]').each () ->
       $dropdown = $(this)
       data = $dropdown.data()

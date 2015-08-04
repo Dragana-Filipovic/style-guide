@@ -13,6 +13,9 @@ module.exports = ->
         './node_modules/moment/min/moment-with-locales.js'
         './node_modules/svg4everybody/svg4everybody.js'
         './node_modules/iframe-resizer/src/iframeResizer.contentWindow.js'
+        './node_modules/bootstrap/js/dropdown.js'
+        './node_modules/bootstrap-select/js/bootstrap-select.js'
+        './dist/modernizr/modernizr.custom.js'
         './dist/jquery/axa-wsg.jquery.all.js'
         './docs/example-js/**/*.coffee'
       ]

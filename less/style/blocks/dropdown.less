@@ -2,105 +2,118 @@
 @import '../blocks/icon';
 @import '../blocks/control';
 
-@dropdown-arrow-width: 40px;
+// TEMPORARY: to be explicitly defined
+@import '../../../../node_modules/bootstrap/less/variables';
+@import '../../../../node_modules/bootstrap/less/mixins';
+@import '../../../../node_modules/bootstrap/less/buttons';
+@import '../../../../node_modules/bootstrap/less/button-groups';
+@import '../../../../node_modules/bootstrap/less/dropdowns';
+@import '../../../../node_modules/bootstrap-select/less/bootstrap-select';
 
-.dropdown.dropdown--js {
-  &:focus {
-    outline: none;
-  }
+.pull-left {
+  float: left;
 }
+// /TEMPORARY
 
-.dropdown__label {
-  display: none;
-}
+// @dropdown-arrow-width: 40px;
 
-.dropdown--js .dropdown__label {
-  .control();
-  .icon-after();
-  .icon-after--dropdown();
+// .dropdown.dropdown--js {
+//   &:focus {
+//     outline: none;
+//   }
+// }
 
-  padding-right: 15px + @dropdown-arrow-width;
-  border: @focus-border-width solid @color-gray--lighter;
-  overflow: hidden;
+// .dropdown__label {
+//   display: none;
+// }
+
+// .dropdown--js .dropdown__label {
+//   .control();
+//   .icon-after();
+//   .icon-after--dropdown();
+
+//   padding-right: 15px + @dropdown-arrow-width;
+//   border: @focus-border-width solid @color-gray--lighter;
+//   overflow: hidden;
 
 
-  &:after {
-    position: absolute;
-    right: -@focus-border-width;
-    top: -@focus-border-width;
+//   &:after {
+//     position: absolute;
+//     right: -@focus-border-width;
+//     top: -@focus-border-width;
 
-    width: @dropdown-arrow-width;
-    height: 40px;
-    border: @focus-border-width solid @color-blue-gray--light;
-    border-left-width: 0;
-    z-index: @z-index-dropdown;
+//     width: @dropdown-arrow-width;
+//     height: 40px;
+//     border: @focus-border-width solid @color-blue-gray--light;
+//     border-left-width: 0;
+//     z-index: @z-index-dropdown;
 
-    line-height: 40px;
-    text-align: center;
+//     line-height: 40px;
+//     text-align: center;
 
-    background: @color-blue-gray--light;
-    color: @color-light-blue;
-  }
-}
+//     background: @color-blue-gray--light;
+//     color: @color-light-blue;
+//   }
+// }
 
-.dropdown--js.dropdown:focus .dropdown__label {
-  border-color: @color-light-blue;
-}
+// .dropdown--js.dropdown:focus .dropdown__label {
+//   border-color: @color-light-blue;
+// }
 
-.dropdown--js.dropdown:focus .dropdown__label:after {
-  border-color: @color-light-blue;
-}
+// .dropdown--js.dropdown:focus .dropdown__label:after {
+//   border-color: @color-light-blue;
+// }
 
-.dropdown__select {
-  position: relative;
-  z-index: @z-index-dropdown-select;
+// .dropdown__select {
+//   position: relative;
+//   z-index: @z-index-dropdown-select;
 
-  width: 100%;
-  height: 40px;
+//   width: 100%;
+//   height: 40px;
 
-  line-height: 40px;
-}
+//   line-height: 40px;
+// }
 
-// Firefox is not respecting line-height in select elements
-@-moz-document url-prefix() {
-  .dropdown__select {
-    padding-top: 10px;
-  }
-}
+// // Firefox is not respecting line-height in select elements
+// @-moz-document url-prefix() {
+//   .dropdown__select {
+//     padding-top: 10px;
+//   }
+// }
 
-.dropdown--js .dropdown__select {
-  display: block;
+// .dropdown--js .dropdown__select {
+//   display: block;
 
-  width: 100%;
-  height: 40px;
-  border: none;
-  margin: -40px 0 0 0;
+//   width: 100%;
+//   height: 40px;
+//   border: none;
+//   margin: -40px 0 0 0;
 
-  opacity: 0;
-  filter: alpha(opacity=0);
-  background: @color-gray--lighter;
-}
+//   opacity: 0;
+//   filter: alpha(opacity=0);
+//   background: @color-gray--lighter;
+// }
 
-.dropdown--condensed {
-  height: @control-height-condensed;
+// .dropdown--condensed {
+//   height: @control-height-condensed;
 
-  .dropdown__label {
-    .control--condensed();
+//   .dropdown__label {
+//     .control--condensed();
 
-    &::after {
-      height: @control-height-condensed;
-      line-height: @control-height-condensed;
-    }
-  }
+//     &::after {
+//       height: @control-height-condensed;
+//       line-height: @control-height-condensed;
+//     }
+//   }
 
-  .dropdown__select {
-    height: @control-height-condensed;
-  }
+//   .dropdown__select {
+//     height: @control-height-condensed;
+//   }
   
-  &.dropdown--js .dropdown__select {
-    margin-top: -@control-height-condensed;
-  }
+//   &.dropdown--js .dropdown__select {
+//     margin-top: -@control-height-condensed;
+//   }
 
-}
+// }
 
 /* Copyright AXA Versicherungen AG 2015 */
