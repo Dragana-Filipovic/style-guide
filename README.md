@@ -1,6 +1,6 @@
 [![Build Status](https://api.shippable.com/projects/544e872d44927f89db3df031/badge?branchName=master)](https://app.shippable.com/projects/544e872d44927f89db3df031/builds/latest)
 
-# AXA Switzerland Web Style Guide
+# AXA Switzerland Web Styleguide
 
 > The mobile-ready style guide for internal and external
 > web apps!
@@ -86,4 +86,5 @@ Check the collaborators list for the people behind it.
 ## License
 
 Copyright 2015 AXA Versicherungen AG. All rights reserved.
+
 <!-- Copyright AXA Versicherungen AG 2015 -->

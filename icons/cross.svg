@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 2048 2048">
+    <title>Cross</title>
+    <path d="M320 0L0 320l704 704L0 1728l320 320 704-704 704 704 320-320-704-704 704-704L1728 0l-704 704L320 0z"
+          fill-rule="evenodd"/>
+</svg>

@@ -1,0 +1,207 @@
+---
+cache: true
+filename: page.jade
+---
+
+include /components/includes/mixins.jade
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width")
+    meta(name="description", content=config.description)
+    meta(name="keywords", content=config.keywords)
+    meta(name="author", content=config.author)
+      
+    // iOS app icon
+    mixin appicon_ios(size)
+      - var s = size + "x" + size
+      link(rel="apple-touch-icon-precomposed", sizes=s, href=relative("/images/app-icon/ios/"+s+".png"))
+        
+    +appicon_ios("57")
+    +appicon_ios("72")
+    +appicon_ios("76")
+    +appicon_ios("114")
+    +appicon_ios("120")
+    +appicon_ios("144")
+    +appicon_ios("152")
+    +appicon_ios("180")
+    
+    meta(name="apple-mobile-web-app-title", content="Web Styleguide")
+      
+    link(media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)", rel="apple-touch-startup-image", href=relative("/images/splash-screen/ios/750x1294.png"))
+    
+    // android/chrome app iocn
+    link(rel="manifest", href=relative("/content/manifest.json"))
+    link(rel="icon", sizes="192x192", href=relative("/images/app-icon/android/192x192.png"))
+    meta(name="mobile-web-app-capable", content="yes")
+      
+    // windows tiles
+    meta(name="application-name", content="Web Styleguide")
+    meta(name="msapplication-square70x70logo", content=relative("/images/app-icon/windows/128x128.png"))
+    meta(name="msapplication-square150x150logo", content=relative("/images/app-icon/windows/270x270.png"))
+    meta(name="msapplication-wide310x150logo", content=relative("/images/app-icon/windows/558x270.png"))
+    meta(name="msapplication-square310x310logo", content=relative("/images/app-icon/windows/558x558.png"))
+
+    title #{title} | Web Styleguide
+    link(rel="stylesheet", href="//fast.fonts.net/cssapi/1da4c08a-73a4-4e34-8997-1c1eeb1a8cca.css")
+    link(rel="stylesheet", href=relative("/css/normalize.min.css"))
+    link(rel="stylesheet", href=relative("/css/docs.min.css"))
+
+    script(src=relative('/js/docs.all.min.js'))
+    script(src="//www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}")
+    
+    script.
+      // Set the locale for momentjs used in the datepicker
+      moment.locale('en_GB')
+          
+    script.
+      // Include the UserVoice JavaScript SDK (only needed once on a page)
+      UserVoice=window.UserVoice||[];
+      UserVoice.push(['set', {
+        accent_color: '#103184',
+        screenshot_enabled: false
+      }]);
+      (function(){
+        var uv=document.createElement('script');
+        uv.type='text/javascript';
+        uv.async=true;
+        uv.src='//widget.uservoice.com/O8ex403PfbC0GjKz3DuQ.js';
+        var s=document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(uv,s)
+      })();
+
+  body.site
+    - function splitCollectionName(collectionName) { return collectionName.split('__'); }
+    - function joinCollectionName(collectionNameParts) { return collectionNameParts.join('__'); }
+    - function getNavCollection(collectionNames) { for(var i in collectionNames) { var collectionName = collectionNames[i]; if(splitCollectionName(collectionName)[0] == 'nav') { return collectionName; } } }
+    - function isCollectionOpen(collection, currentCollection) { var splitCollection = splitCollectionName(collection); var splitCurrentCollection = splitCollectionName(currentCollection); if(splitCollection.length > splitCurrentCollection) return false; for(var i in splitCollection) { if(splitCollection[i] != splitCurrentCollection[i]) return false; } return true; }
+    
+    - var navCollection = navigationSubCollection ? navigationSubCollection : getNavCollection(collection);
+    - var splitNavCollection = navCollection ? splitCollectionName(navCollection) : [''];
+    
+    .site__page
+      #notification.notifications(data-notification-info=relative('/images/icons.svg#info')
+        data-notification-success=relative('/images/icons.svg#checkmark')
+        data-notification-error=relative('/images/icons.svg#cross'))
+      .l-container
+        .docs-floating-action
+          a(href='#feedback', data-uv-trigger).docs-floating-action__button.button.button--floating
+            +svg('feedback', ['button__icon', 'icon-svg'])
+      header.header
+        .header__container.l-container
+          .header__mobile-trigger(data-toggle='site-menu', data-target='.site')
+          a.header__brand.brand(href=relative("/index.html"))
+            .brand__logo
+          .header__meta
+            .header__meta__upper
+            .header__meta__lower
+              .header__meta__welcome
+                div
+                  .header__meta__welcome__main
+                    span Web Styleguide
+
+                  // ko if: hasGitHubIntegration && github.isSignedIn()
+                  .header__meta__welcome__secondary
+                    // ko text: github.user().login
+                    // /ko
+                  // /ko
+
+        .header__menu
+          .l-container
+            ul.menu.menu--main
+              if splitNavCollection
+                - currentNavCollection = joinCollectionName(splitNavCollection.slice(0, 2));
+                each page in nav
+                  if page
+                    - var isActive = false
+                    - var pageNavCollection = page.navigationSubCollection ? page.navigationSubCollection : getNavCollection(page.collection)
+                    if pageNavCollection
+                      - var pageNavCollection = joinCollectionName(splitCollectionName(pageNavCollection).slice(0, 2));
+                      - isActive = currentNavCollection == pageNavCollection
+                      li.menu__item(
+                        class={'is-active': isActive}
+                      )
+                        a.menu__link(
+                          href=relative(page.link)
+                        )= page.title
+              .autocomplete.docs-search
+                input(type='text', data-search, data-search-index-data=relative('/searchIndex.json'), data-search-base-url=relative('/')).docs-search__control
+
+      .page-content.l-container
+
+        // don't print top level navigation in menu (collection 'nav')
+        if splitNavCollection.length > 1
+
+          // start with the second level nav__xxx
+          - var currentNavCollection = joinCollectionName(splitCollectionName(navCollection).slice(0, 2));
+
+          mixin displayMenu(collectionName, isNestedLevel, isNestedLevelOpen)
+            ul(class= { 'left__menu': !isNestedLevel,
+              'menu': !isNestedLevel,
+              'menu--left': !isNestedLevel,
+              'menu__level': isNestedLevel,
+              'is-open': isNestedLevelOpen })
+              each page in collections[collectionName]
+
+                - var nestedNavCollection = page.navigationSubCollection
+                - var isActive = page.link == link;
+                - var isOpen = nestedNavCollection && isCollectionOpen(nestedNavCollection, navCollection);
+
+                li.menu__item
+                  a.menu__link(
+                    href=relative(page.link),
+                    class={'is-active': isActive, 'is-open': isOpen }
+                  ) #{page.title}
+                    if nestedNavCollection
+                      .menu__dropdown__icon(
+                        class={ 'is-open': isOpen }
+                      )
+                        +svg('arrow-right', ['menu__dropdown__icon__is-closed', 'icon-svg'])
+                        +svg('arrow-bottom', ['menu__dropdown__icon__is-open', 'icon-svg'])
+
+                  if nestedNavCollection
+                    +displayMenu(nestedNavCollection, true, isOpen)
+
+          .l-row
+            nav.l-col.l-col--2
+              +displayMenu(currentNavCollection, false, false)
+            .l-col.l-col--10
+              if headline !== false
+                h1.heading.heading--page #{title}
+              div!= contents
+
+        else
+          if headline !== false
+            h1.heading.heading--page #{title}
+          div!= contents
+          
+      footer.footer
+        .footer__content
+        .footer__copyline
+          .l-container
+            ul.menu.menu--copyline
+              li.menu__item
+                a(href=relative('/changelog.html')).menu__link Changelog
+              li.menu__item
+                span.menu__link AXA 2015 ©
+
+    script(type='text/javascript').
+      //// Set the right mobile menu level as current
+      //var $menu = $("#menu-mobile");
+      //var $level = $menu.find("[data-link='!{link}']").closest('.menu__level');
+      //
+      //$menu.slidingMenu();
+      //$menu.slidingMenu('level', $level);
+      //
+      //// Highlight the right mobile menu link as active
+      //$menu.find("[data-link='!{link}']").addClass('is-active')
+
+      // Setup the fancy GitHub integration
+      var viewModel = new MainViewModel(!{JSON.stringify(config)});
+      ko.applyBindings(viewModel);
+      viewModel.init();
+
+// Copyright AXA Versicherungen AG 2015

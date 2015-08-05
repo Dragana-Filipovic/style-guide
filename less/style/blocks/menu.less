@@ -32,26 +32,61 @@
   }
 
   .menu__link {
-    display: block;
+    display: inline-block;
 
     padding: 7px 0;
 
     color: @color-gray--darkest;
     text-decoration: none;
 
-    &.is-active {
-      font-weight: bold;
-      color: @color-light-blue;
+    &.is-active, &.is-open {
+      font-weight: @font-weight-medium;
+      color: @color-blue;
+    }
+
+    &:hover, :focus {
+      color: @color-red;
     }
   }
 
-  .menu__item--left-category {
-    font-weight: bold;
-  }
-}
+  .menu__level {
+    padding-left: 19px;
+    display: none;
 
-.menu--left-second {
-  font-size: 1em;
+    &.is-open {
+      display: block;
+    }
+  }
+  
+  .menu__dropdown__icon {
+    display: inline-block;
+
+    height: 0.7rem;
+    width: 0.7rem;
+    margin-left: 8px;
+
+    .menu__dropdown__icon__is-closed {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .menu__dropdown__icon__is-open {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    &.is-open {
+      .menu__dropdown__icon__is-closed {
+        display: none;
+      }
+
+      .menu__dropdown__icon__is-open {
+        display: block;
+      }
+    }
+  }
 }
 
 .menu--collapsing,
@@ -80,47 +115,33 @@
       color: white;
     }
 
-    &.icon::before {
-      padding-right: 8px;
-    }
-
     &.is-active {
       background-color: @color-tbd-24;
       color: white;
     }
   }
 
-  .menu__link--parent {
-    .icon;
-    .icon--arrow-right;
+  .menu__link__parent-icon {
+    display: block;
+    float: right;
 
-    &::before {
-      display: block;
-      float: right;
-
-      padding: 0;
-
-      font-size: 1.4em;
-    }
+    height: 1.4em;
+    width: 1.4em;
+    padding: 0;
   }
 
   .menu__link--back {
-    .icon;
-    .icon--arrow-left;
-
     background-color: @color-tbd-24;
+  }
 
-    &::before {
-      display: block;
-      float: left;
+  .menu__link__back-icon {
 
-      padding-right: 8px;
+    display: block;
+    float: left;
 
-      font-size: 1.4em;
-    }
-    &:hover {
-      color: white;
-    }
+    height: 1.4em;
+    width: 1.4em;
+    padding-right: 8px;
   }
 }
 
@@ -239,6 +260,9 @@
 
   padding-top: 10px;
   margin-left: (@grid-gutter-width / -2);
+  margin-right: (@grid-gutter-width / -2);
+
+  font-size: 0.9em;
 
   .respond(large, {
     display: block;
@@ -257,10 +281,6 @@
       .menu__link {
         color: @color-blue;
       }
-
-      .menu__link--home::before {
-        color: @color-blue;
-      }
     }
 
     .respond(large, {
@@ -271,21 +291,16 @@
   .menu__link {
     display: block;
 
-    font-size: 14px;
-    font-family: "Conv_ITCFranklinGothicStd-MdCd", sans-serif;
     text-decoration: none;
 
     color: @color-gray--darker;
   }
 
-  .menu__link--home {
-    .icon();
-    .icon--home();
-
-    &::before {
-      font-size: 16px;
-      color: @color-blue;
-    }
+  .menu__link__home {
+    width: 16px;
+    height: 44px;
+    fill: currentColor;
+    display: inline-block;
   }
 }
 
@@ -325,10 +340,10 @@
 .menu--language {
   margin-left: 7px;
 
-  font-size: 12px; // TODO: fixed font-size
-
   .menu__item {
     margin-left: 7px;
+
+    font-size: 0.8em;
 
     &.is-active,
     &:hover {
@@ -362,20 +377,14 @@
 
   .menu__item {
     padding-left: 8px;
-    margin-top: 2px;
     margin-left: 12px;
 
-    font-size: 12px; // TODO: fixed font-size
     font-weight: bold;
-    font-family: "ITCFranklinGothicCondensedDemi", sans-serif;
   }
 }
 
 .menu--language {
-
   .menu__item {
-    font-size: 14px; // TODO: fixed font-size
-    font-family: "Conv_ITCFranklinGothicStd-MdCd", sans-serif;
     text-transform: uppercase;
   }
 }
@@ -487,4 +496,5 @@
     color: @color-blue-gray;
   }
 }
+
 /* Copyright AXA Versicherungen AG 2015 */

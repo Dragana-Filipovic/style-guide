@@ -13,6 +13,7 @@
   &:extend(.clearfix all);
 
   padding: @padding-top-bottom 0;
+  border-bottom: 1px solid @color-blue-gray--light;
 
   .respond(medium, {
     border-bottom: 5px solid @color-blue;
@@ -25,29 +26,23 @@
 }
 
 .header__container {
-  padding-bottom: 20px;
+  .respond(medium, {
+    padding-bottom: 20px;
+  });
+}
+
+.header__mobile-burger {
+  height: 100%;
+  width: 100%;
 }
 
 .header__mobile-trigger {
-  .icon;
-  .icon--burger;
-
-  &::before {
-    font-size: 32px;
-  }
-
+  height: 20px;
+  width: 25px;
+  margin-top: 6px;
   float: right;
-
-  font-size: 1.3em;
-  text-align: center;
-
-  color: @color-blue;
-
+  fill: @color-blue;
   cursor: pointer;
-
-  &:hover {
-    color: lighten(@color-blue, 10%);
-  }
 
   .respond(large, {
     display: none;
@@ -86,15 +81,15 @@
 .header__meta__lower {
   &:extend(.clearfix all);
 
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .header__meta__welcome {
   &:extend(.clearfix all);
 
   float: right;
-
-  padding: 5px 0 0 0;
+  padding: 0;
+  font-size: 17px;
 
   ul {
     margin: 0;
@@ -112,9 +107,7 @@
   margin: 0;
 
   line-height: 16px;
-  font-size: 16px;
   font-weight: bold;
-  font-family: ITCFranklinGothicCondensedDemi, sans-serif;
 
   color: @color-blue;
 
@@ -132,8 +125,6 @@
   margin: 0;
 
   line-height: 16px;
-  font-size: 16px;
-  font-family: ITCFranklinGothicCondensedDemi, sans-serif;
 
   color: @color-blue;
 
@@ -168,11 +159,11 @@
 
 .header__action {
   margin-left: 8px;
-  margin-bottom: -3px;
+  margin-top: -4px;
 
   .respond(large, {
     float: left;
-    });
+  });
 
   &:first-of-type {
     margin-left: 20px;
@@ -187,9 +178,10 @@
 
 .header__action__button {
   background: red;
-  padding: 5px 10px;
+  padding: 4px 10px;
 
-  font-weight: bold;
+  font-weight: @font-weight-medium;
+  font-size: 15px;
 
   color: white;
   text-decoration: none;
