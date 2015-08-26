@@ -1,0 +1,45 @@
+---
+title: Button Dropdown
+order: 3
+collection: nav__components
+template: page.jade
+tags: button, dropdown, button-dropdown
+---
+
+include ./includes/mixins.jade
+
+p.paragraph.
+  Lorem ipsum...
+
+.example
+  include ./includes/example-header.jade
+  .example__content
+    .example__border
+      iframe.example__iframe(
+        src=relative('/components/demos/button-dropdown.html')
+        data-iframe-resizer
+      )
+
+.toggle
+  .toggle__button(data-info, data-target='#code')
+    +svg('source', ['icon-svg', 'toggle__icon'])
+    span See code
+  .toggle__content#code
+    .tab-panel(data-tab, data-tab-default='html')
+      .tab-panel__header
+        .tab-panel__header__tabs
+          .tab-panel__header__tab(data-tab-toggle='html') HTML
+      .tab-panel__content
+        .tab-panel__content__tab(data-tab-content='html')
+          .tab-panel__content__tab__fullwidth-content
+            .highlight: pre.highlight__listing.hljs: code.js
+              include:highlightcode ./snippets/button-dropdown.jade
+
+h3.heading.heading--tertiary UX Checklist
+ul.checklist
+  li.checklist__item
+    +svg('checkmark', ['checklist__item__icon', 'icon-svg'])
+    .checklist__item__content.
+      Lorem ipsum
+
+//- Copyright AXA Versicherungen AG 2015
