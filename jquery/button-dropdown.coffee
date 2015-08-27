@@ -15,7 +15,6 @@
         event.data.toggle event
 
       @$actions.on 'click', @, (event) ->
-        console.log 'blah'
         event.data.toggle event
 
     toggle: () ->

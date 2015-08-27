@@ -1,0 +1,37 @@
+@import '../variables';
+
+.action-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.action-list__action {
+  display: block;
+  width: 100%;
+
+  cursor: pointer;
+
+  .make-button-size(
+    @height: @button-height;
+    @pad-lr: auto;
+    @icon-size: @button-icon-size;
+    @font-size: @button-font-size;
+  );
+
+  .respond(medium; {
+    .make-button-size(
+      @height: @button-height--medium;
+      @pad-lr: @button-pad-lr--medium;
+      @icon-size: @button-icon-size;
+      @font-size: @button-font-size--medium;
+    );
+  });
+
+  .make-button-color(
+    @bg-color: @button-primary-bg;
+    @color: @button-primary-color;
+    @highlight-bg-color: @button-primary-highlight-bg;
+  );
+}
