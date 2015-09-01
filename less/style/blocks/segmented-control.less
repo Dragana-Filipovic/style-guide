@@ -103,7 +103,7 @@
 
   .segmented-control__item {
     .undo-invisible-font();
-    
+
     display: inline-block;
 
     height: 40px;
@@ -135,4 +135,20 @@
   }
 }
 
-/* Copyright AXA Versicherungen AG 2015 */
+.segmented-control--js[disabled] {
+  &.segmented-control:focus .segmented-control__item {
+    border: 1px solid @color-gray !important;
+  }
+
+  .segmented-control__item {
+    border: 1px solid @color-gray !important;
+    color: @color-gray;
+  }
+
+  .segmented-control__item.is-active {
+    color: white;
+    background-color: @color-gray;
+  }
+}
+
+// Copyright AXA Versicherungen AG 2015
