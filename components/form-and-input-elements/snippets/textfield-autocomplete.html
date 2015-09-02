@@ -1,0 +1,20 @@
+
+<div class="l-container">
+  <div class="form">
+    <div class="form__group">
+      <label class="form__group__label">
+        <div class="form__group__label__text">Form label</div>
+      </label>
+      <div class="form__group__control">
+        <div class="autocomplete">
+          <input id="cities-autocomplete" type="text" class="control control--input"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('#cities-autocomplete').autocomplete({
+    source: ['8000 Zürich', '8400 Winterthur', '8472 Seuzach']});
+    
+</script>

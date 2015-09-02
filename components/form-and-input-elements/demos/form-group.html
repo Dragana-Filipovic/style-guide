@@ -1,0 +1,58 @@
+<!DOCTYPE html><html><!--[if lt IE 10]><html class="lt-ie10"><![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><meta name="description" content="AXA Switzerland Web Style Guide"><meta name="keywords" content="axa,switzerland,versicherungen,web,style,guide"><meta name="author" content="AXA Versicherungen AG"><title>Form Group | Demo | Web Style Guide</title><link rel="stylesheet" href="//fast.fonts.net/cssapi/1da4c08a-73a4-4e34-8997-1c1eeb1a8cca.css"><link rel="stylesheet" href="../../../css/normalize.min.css"><link rel="stylesheet" href="../../../css/style.min.css"><script src="../../../js/docs-examples.all.min.js"></script><script>moment.locale('en_GB')
+</script></head><body><div class="example">
+<div class="form">
+  <div class="form__group">
+    <div class="form__group__label">
+      <div class="form__group__label__text">Firstname*</div>
+    </div>
+    <div class="form__group__control">
+      <input type="text" class="control control--input"/>
+    </div>
+  </div>
+  <div class="form__group">
+    <div class="form__group__label form__group__label--invalid">
+      <div class="form__group__label__text">Lastname*</div>
+    </div>
+    <div class="form__group__control">
+      <input type="text" class="control control--input has-error"/>
+      <div class="form__error-message">Your name can't contain a number.</div>
+    </div>
+  </div>
+  <div class="form__group">
+    <div class="form__group__label">
+      <div class="form__group__label__info-icon">
+        <div data-info="data-info" data-target="#target" class="info-icon">
+          <svg class="info-icon__svg">
+            <use xlink:href="../../../images/icons.svg#info"></use>
+          </svg>
+          <svg class="info-icon__svg info-icon__svg--close">
+            <use xlink:href="../../../images/icons.svg#close"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="form__group__label__info-icon-text-wrapper">Form group with info</div>
+    </div>
+    <div class="form__group__control">
+      <input type="text" class="control control--input"/>
+      <div style="display: none;" id="target" class="form__info-text">
+        <div class="info-text">
+          <p class="paragraph">Some meaningful explanation may be placed here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form__group">
+    <div class="from__group__control form__group__control--fullwidth">
+      <label data-checkbox="data-checkbox" class="checkbox">
+        <input type="checkbox" class="checkbox__checkbox"/>
+        <div class="checkbox__label">
+          <svg class="checkbox__label__icon">
+            <use xlink:href="../../../images/icons.svg#checkmark"></use>
+          </svg>
+          <div class="checkbox__label__text">Full width control</div>
+        </div>
+      </label>
+    </div>
+  </div>
+  <div class="form__footnote">* Form footnote</div>
+</div></div></body></html>

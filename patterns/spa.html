@@ -1,0 +1,162 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><meta name="description" content="AXA Switzerland Web Style Guide"><meta name="keywords" content="axa,switzerland,versicherungen,web,style,guide"><meta name="author" content="AXA Versicherungen AG"><!-- iOS app icon--><link rel="apple-touch-icon-precomposed" sizes="57x57" href="../images/app-icon/ios/57x57.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/app-icon/ios/72x72.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="../images/app-icon/ios/76x76.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/app-icon/ios/114x114.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="../images/app-icon/ios/120x120.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/app-icon/ios/144x144.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="../images/app-icon/ios/152x152.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="../images/app-icon/ios/180x180.png"><meta name="apple-mobile-web-app-title" content="Web Style Guide"><link media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" href="../images/splash-screen/ios/750x1294.png"><!-- android/chrome app iocn--><link rel="manifest" href="../content/manifest.json"><link rel="icon" sizes="192x192" href="../images/app-icon/android/192x192.png"><meta name="mobile-web-app-capable" content="yes"><!-- windows tiles--><meta name="application-name" content="Web Style Guide"><meta name="msapplication-square70x70logo" content="../images/app-icon/windows/128x128.png"><meta name="msapplication-square150x150logo" content="../images/app-icon/windows/270x270.png"><meta name="msapplication-wide310x150logo" content="../images/app-icon/windows/558x270.png"><meta name="msapplication-square310x310logo" content="../images/app-icon/windows/558x558.png"><title>Single Page Apps | Web Style Guide</title><link rel="stylesheet" href="//fast.fonts.net/cssapi/1da4c08a-73a4-4e34-8997-1c1eeb1a8cca.css"><link rel="stylesheet" href="../css/normalize.min.css"><link rel="stylesheet" href="../css/docs.min.css"><script src="../js/docs.all.min.js"></script><script src="//www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script><script>// Set the locale for momentjs used in the datepicker
+moment.locale('en_GB')
+    </script><script>// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];
+UserVoice.push(['set', {
+  accent_color: '#103184',
+  screenshot_enabled: false
+}]);
+(function(){
+  var uv=document.createElement('script');
+  uv.type='text/javascript';
+  uv.async=true;
+  uv.src='//widget.uservoice.com/O8ex403PfbC0GjKz3DuQ.js';
+  var s=document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(uv,s)
+})();
+</script></head><body class="site"><div class="site__page"><div id="notification" data-notification-info="../images/icons.svg#info" data-notification-success="../images/icons.svg#checkmark" data-notification-error="../images/icons.svg#cross" class="notifications"></div><div class="l-container"><div class="docs-floating-action"><a href="#feedback" data-uv-trigger class="docs-floating-action__button button button--floating"><svg class="button__icon icon-svg"><use xlink:href="../images/icons.svg#feedback"></use></svg></a></div></div><header class="header"><div class="header__meta"><div class="header__meta__content"><div class="header__meta__item header__meta__search autocomplete search search--header"><input type="text" data-search data-search-index-data="../searchIndex.json" data-search-base-url=".." class="autocomplete__input search__input search--header"><svg class="search__icon search--header icon-svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../images/icons.svg#search"></use></svg></div><a href="https://github.com/axa-ch/style-guide" class="header__meta__item header__meta__action"><svg class="button__icon icon-svg button__icon--left"><use xlink:href="../images/icons.svg#github"></use></svg>View on GitHub</a></div></div><div class="header__main"><div class="header__main__content"><a href="../index.html" class="header__brand brand"><span class="brand__logo"></span></a><div class="header__menu"><ul class="menu menu--main"><li class="menu__item"><a href="../fundamentals.html" class="menu__link">Fundamentals</a></li><li class="menu__item"><a href="../components.html" class="menu__link">Components</a></li><li class="menu__item is-active"><a href="../patterns.html" class="menu__link">UI Patterns</a></li></ul></div><a href="#" class="header__main__mobile-trigger"><svg class="header__main__mobile-icon"><use xlink:href="../images/icons.svg#burger"></use></svg></a></div></div></header><div class="page-content l-container"><div class="l-row"><nav class="l-col l-col--medium-2"><ul class="left__menu menu menu--left"><li class="menu__item"><a href="spa.html" class="menu__link is-active is-open">Single Page Apps</a></li><li class="menu__item"><a href="forms.html" class="menu__link">Forms</a></li><li class="menu__item"><a href="login.html" class="menu__link">Login</a></li></ul></nav><div class="l-col l-col--medium-10"><h1 class="heading heading--page">Single Page Apps</h1><div>
+<p class="paragraph">
+  A single-page application (SPA),
+  is a web application or web site that fits on
+  a single web page with the goal of providing a more
+  fluid user experience akin to a desktop application.
+  
+</p>
+<div class="toc">
+  <div class="toc__title">Table of contents</div>
+  <ul class="toc__anchor-navigation">
+    <li class="toc__anchor-navigation__item"><a href="#seo" class="toc__anchor-navigation__link">SEO & Analytics</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#performance" class="toc__anchor-navigation__link">Mobile Performance</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#back" class="toc__anchor-navigation__link">Browser Back Button</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#refresh" class="toc__anchor-navigation__link">Refresh & Links</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#feedback" class="toc__anchor-navigation__link">Instant Feedback</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#spinner" class="toc__anchor-navigation__link">Load Spinners</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#animation" class="toc__anchor-navigation__link">Animations & Transitions</a></li>
+  </ul>
+</div>
+<h2 id="seo" class="heading heading--secondary">SEO & Analytics</h2>
+<p class="paragraph">
+  Indexation of SPA can be difficult for search engines
+  like google or analytics tools like AT Internet.
+  Even though it is a technical task, discoverability
+  is crucial for users coming from google and co.
+  
+</p>
+<div class="hr"></div>
+<h2 id="performance" class="heading heading--secondary">Mobile Performance</h2>
+<p class="paragraph">
+  Again, a rather technical task - performance on
+  mobile devices may suffer if too many interactions are
+  about to happen on a page. Design thoughtfully and consider
+  adding more interactions for desktops instead of removing them for mobile.
+  Most importantly: Bring it up as early as possible in development.
+  
+</p>
+<div class="hr"></div>
+<h2 id="back" class="heading heading--secondary"> Browser Back Button</h2>
+<p class="paragraph">
+  Single page applications should react to the browser back button
+  as any other website would. Going back should be fast,
+  reliable (data consistency) and not trigger unnecessary
+  animations or effects.
+  Remember: The back button is the single most used
+  button in every web browser.
+  
+</p>
+<div class="hr"></div>
+<h2 id="refresh" class="heading heading--secondary">Refresh & Links</h2>
+<p class="paragraph">
+  URLs are not automatically updated in single page applications.
+  Additionally, if a link is shared or a url reloaded,
+  the user expects to get to the current page.
+  
+</p>
+<div class="hr"></div>
+<h2 id="feedback" class="heading heading--secondary">Instant Feedback</h2>
+<p class="paragraph">
+  Every actions creates a reaction. Users always need to know
+  if the system is working properly. Feedback to actions should
+    always start max. 0.1 seconds after the
+    user took action (pressed a button for example).
+    
+</p>
+<div class="hr"></div>
+<h2 id="spinner" class="heading heading--secondary">Load Spinners</h2>
+<p class="paragraph">
+  Load spinners tell a user that the site is loading or rendering.
+  
+</p>
+<div class="hr"></div>
+<h2 id="animation" class="heading heading--secondary">Animations & Transitions</h2>
+<p class="paragraph">
+  Moving elements are a powerful tool to attract and or
+  waste users’ attention.
+  When designing an animation consider its goal,
+  its frequency of occurrence, and its mechanics.
+  Employ them sparingly and only when they add meaning to the interaction.
+  Think about whether the animation will cause an attention shift or
+  not and whether the same user is likely to stumble over it again and again.
+  Will the animation reinforce relationships between UI elements?
+  Will users trigger it directly or not?
+  All these aspects matter in the design of a successful animation.
+  
+</p>
+<h3 class="heading heading--tertiary">UX Checklist</h3>
+<ul class="checklist">
+  <li class="checklist__item">
+    <svg class="checklist__item__icon icon-svg">
+      <use xlink:href="../images/icons.svg#checkmark"></use>
+    </svg>
+    <div class="checklist__item__content">
+      For an animation to effectively convey a cause-and-effect
+      relationship between UI elements, the effect must begin
+      within 0.1 seconds of the initial user action.
+      This 0.1-second response time maintains the
+      feeling of direct manipulation and supports the
+      perception that the user action caused the new element to appear.
+    </div>
+  </li>
+  <li class="checklist__item">
+    <svg class="checklist__item__icon icon-svg">
+      <use xlink:href="../images/icons.svg#checkmark"></use>
+    </svg>
+    <div class="checklist__item__content">
+      Follow web conventions so that password managers can store
+      the username and password for the user.
+    </div>
+  </li>
+  <li class="checklist__item">
+    <svg class="checklist__item__icon icon-svg">
+      <use xlink:href="../images/icons.svg#checkmark"></use>
+    </svg>
+    <div class="checklist__item__content">
+      Slower transitions are less likely to cause an attention
+      shift and are thus less distracting.
+      They are appropriate for animations indirectly
+      triggered by the user or not user initiated in any way.
+      In these situations, the new element should appear with little or
+      no change in position to minimize distraction.
+    </div>
+  </li>
+  <li class="checklist__item">
+    <svg class="checklist__item__icon icon-svg">
+      <use xlink:href="../images/icons.svg#checkmark"></use>
+    </svg>
+    <div class="checklist__item__content">
+      Fast animations are more likely to attract attention
+      when they happen outside the user’s focus of attention.
+      They are suitable for important elements that users must
+      attend to and act upon.
+      
+    </div>
+  </li>
+</ul></div></div></div></div><footer class="footer"><div class="footer__content"></div><div class="footer__copyline"><div class="l-container"><ul class="menu menu--copyline"><li class="menu__item"><a href="../changelog.html" class="menu__link">Changelog</a></li><li class="menu__item"><span class="menu__link">© AXA Versicherungen AG 2015</span></li></ul></div></div></footer></div><script type="text/javascript">//// Set the right mobile menu level as current
+//var $menu = $("#menu-mobile");
+//var $level = $menu.find("[data-link='/patterns/spa.html']").closest('.menu__level');
+//
+//$menu.slidingMenu();
+//$menu.slidingMenu('level', $level);
+//
+//// Highlight the right mobile menu link as active
+//$menu.find("[data-link='/patterns/spa.html']").addClass('is-active')
+</script></body></html>

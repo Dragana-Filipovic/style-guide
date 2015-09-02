@@ -1,0 +1,297 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><meta name="description" content="AXA Switzerland Web Style Guide"><meta name="keywords" content="axa,switzerland,versicherungen,web,style,guide"><meta name="author" content="AXA Versicherungen AG"><!-- iOS app icon--><link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../images/app-icon/ios/57x57.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/app-icon/ios/72x72.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../images/app-icon/ios/76x76.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/app-icon/ios/114x114.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../images/app-icon/ios/120x120.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/app-icon/ios/144x144.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../images/app-icon/ios/152x152.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="../../images/app-icon/ios/180x180.png"><meta name="apple-mobile-web-app-title" content="Web Style Guide"><link media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" href="../../images/splash-screen/ios/750x1294.png"><!-- android/chrome app iocn--><link rel="manifest" href="../../content/manifest.json"><link rel="icon" sizes="192x192" href="../../images/app-icon/android/192x192.png"><meta name="mobile-web-app-capable" content="yes"><!-- windows tiles--><meta name="application-name" content="Web Style Guide"><meta name="msapplication-square70x70logo" content="../../images/app-icon/windows/128x128.png"><meta name="msapplication-square150x150logo" content="../../images/app-icon/windows/270x270.png"><meta name="msapplication-wide310x150logo" content="../../images/app-icon/windows/558x270.png"><meta name="msapplication-square310x310logo" content="../../images/app-icon/windows/558x558.png"><title>Browser support | Web Style Guide</title><link rel="stylesheet" href="//fast.fonts.net/cssapi/1da4c08a-73a4-4e34-8997-1c1eeb1a8cca.css"><link rel="stylesheet" href="../../css/normalize.min.css"><link rel="stylesheet" href="../../css/docs.min.css"><script src="../../js/docs.all.min.js"></script><script src="//www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script><script>// Set the locale for momentjs used in the datepicker
+moment.locale('en_GB')
+    </script><script>// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];
+UserVoice.push(['set', {
+  accent_color: '#103184',
+  screenshot_enabled: false
+}]);
+(function(){
+  var uv=document.createElement('script');
+  uv.type='text/javascript';
+  uv.async=true;
+  uv.src='//widget.uservoice.com/O8ex403PfbC0GjKz3DuQ.js';
+  var s=document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(uv,s)
+})();
+</script></head><body class="site"><div class="site__page"><div id="notification" data-notification-info="../../images/icons.svg#info" data-notification-success="../../images/icons.svg#checkmark" data-notification-error="../../images/icons.svg#cross" class="notifications"></div><div class="l-container"><div class="docs-floating-action"><a href="#feedback" data-uv-trigger class="docs-floating-action__button button button--floating"><svg class="button__icon icon-svg"><use xlink:href="../../images/icons.svg#feedback"></use></svg></a></div></div><header class="header"><div class="header__meta"><div class="header__meta__content"><div class="header__meta__item header__meta__search autocomplete search search--header"><input type="text" data-search data-search-index-data="../../searchIndex.json" data-search-base-url="../.." class="autocomplete__input search__input search--header"><svg class="search__icon search--header icon-svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../images/icons.svg#search"></use></svg></div><a href="https://github.com/axa-ch/style-guide" class="header__meta__item header__meta__action"><svg class="button__icon icon-svg button__icon--left"><use xlink:href="../../images/icons.svg#github"></use></svg>View on GitHub</a></div></div><div class="header__main"><div class="header__main__content"><a href="../../index.html" class="header__brand brand"><span class="brand__logo"></span></a><div class="header__menu"><ul class="menu menu--main"><li class="menu__item is-active"><a href="../../fundamentals.html" class="menu__link">Fundamentals</a></li><li class="menu__item"><a href="../../components.html" class="menu__link">Components</a></li><li class="menu__item"><a href="../../patterns.html" class="menu__link">UI Patterns</a></li></ul></div><a href="#" class="header__main__mobile-trigger"><svg class="header__main__mobile-icon"><use xlink:href="../../images/icons.svg#burger"></use></svg></a></div></div></header><div class="page-content l-container"><div class="l-row"><nav class="l-col l-col--medium-2"><ul class="left__menu menu menu--left"><li class="menu__item"><a href="../layout.html" class="menu__link">Layout<div class="menu__dropdown__icon"><svg class="menu__dropdown__icon__is-closed icon-svg"><use xlink:href="../../images/icons.svg#arrow-right"></use></svg><svg class="menu__dropdown__icon__is-open icon-svg"><use xlink:href="../../images/icons.svg#arrow-bottom"></use></svg></div></a><ul class="menu__level"><li class="menu__item"><a href="../layout/devices.html" class="menu__link">Devices</a></li></ul></li><li class="menu__item"><a href="../design.html" class="menu__link">Design<div class="menu__dropdown__icon"><svg class="menu__dropdown__icon__is-closed icon-svg"><use xlink:href="../../images/icons.svg#arrow-right"></use></svg><svg class="menu__dropdown__icon__is-open icon-svg"><use xlink:href="../../images/icons.svg#arrow-bottom"></use></svg></div></a><ul class="menu__level"><li class="menu__item"><a href="../design/colors.html" class="menu__link">Colors</a></li><li class="menu__item"><a href="../design/appicon-and-splashscreen.html" class="menu__link">App icon and splash screen</a></li><li class="menu__item"><a href="../design/icons.html" class="menu__link">Icons</a></li></ul></li><li class="menu__item"><a href="../code.html" class="menu__link is-active is-open">Code<div class="menu__dropdown__icon is-open"><svg class="menu__dropdown__icon__is-closed icon-svg"><use xlink:href="../../images/icons.svg#arrow-right"></use></svg><svg class="menu__dropdown__icon__is-open icon-svg"><use xlink:href="../../images/icons.svg#arrow-bottom"></use></svg></div></a><ul class="menu__level is-open"><li class="menu__item"><a href="getting-started.html" class="menu__link">Getting started</a></li><li class="menu__item"><a href="bem.html" class="menu__link">BEM</a></li><li class="menu__item"><a href="browser-support.html" class="menu__link is-active is-open">Browser support</a></li><li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li></ul></li></ul></nav><div class="l-col l-col--medium-10"><h1 class="heading heading--page">Browser support</h1><div><p class="paragraph">Customers, partners and employees are using an
+extensive amount of different browsers.
+Therefore, websites and applications should cater
+to all of them and not rely on proprietary
+technologies in or for different browsers.
+The W3C standards are also our standards.</p><h2 id="what-browsers-to-support-" class="heading heading--secondary">
+What browsers to support?
+</h2>
+<p class="paragraph">Based on data from the 13th of may 2015, we are
+supporting the following browsers and mobile
+operating systems:</p>
+<h3>Desktop</h3>
+<table class="table table--docs">
+  <thead>
+    <tr class="table__header">
+      <th class="table__header__item">Browser</th>
+      <th class="table__header__item">Platform</th>
+      <th class="table__header__item">Browser Version</th>
+    </tr>
+  </thead>
+  <tbody class="table__content">
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">Internet Explorer</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">Windows</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">9+</div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">Firefox</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">Desktop</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">34.0+</div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">Chrome</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">Windows / Mac OS X</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">39.0.2171+</div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">Safari</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">Mac OS X</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">7.0+</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3>Mobile & Tablet</h3>
+<div class="l-row">
+  <div class="l-half">
+    <div id="android-piechart" class="docs-chart-container">Android Chart</div>
+  </div>
+  <div class="l-half">
+    <div id="ios-piechart" class="docs-chart-container">iOS Chart</div>
+  </div>
+</div>
+<table class="table table--docs">
+  <thead>
+    <tr class="table__header">
+      <th class="table__header__item">Browser</th>
+      <th class="table__header__item">Platform</th>
+      <th class="table__header__item">System Version</th>
+    </tr>
+  </thead>
+  <tbody class="table__content">
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">Android Browser</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">Android</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">4.0+</div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">Chrome</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">Android, iOS</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">39.0.2171+ (Browser Version)</div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">Safari</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">iOS</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">7.0+</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="hr"></div><h2 id="internet-explorer-8-amp-9" class="heading heading--secondary">
+Internet Explorer 8 &amp; 9
+</h2>
+<p class="paragraph">You&#39;ll need to add some of the polyfills listed
+below to add support for IE 9.</p><p class="paragraph">With the current release Internet Explorer 8 is
+NOT supported. Please consider adding a &quot;Your
+browser is not supported page&quot; or add support
+for IE 8 on your own. The polyfills listed below
+will do the major parts of the job.</p>
+<table class="table table--docs">
+  <thead>
+    <tr class="table__header">
+      <th class="table__header__item">Version</th>
+      <th class="table__header__item">Polyfill</th>
+    </tr>
+  </thead>
+  <tbody class="table__content">
+    <tr class="table__row">
+      <td style="min-width: 100px" class="table__row__item">
+        <div class="table__row__item__content">up to IE 9</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">
+          HTML 5 Elements
+          <br/><br />
+          Don't use HTML 5 tags or add the
+          <a class="link" href="https://github.com/afarkas/html5shiv" class="link" >HTML5SHIV</a>
+          polyfill.
+        </div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">up to IE 8</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">
+          Media queries
+          <br/><br/>
+          Add the
+          <a class="link" href="https://github.com/scottjehl/Respond" class="link" >respond.js</a>
+          polyfill to support media queries.
+        </div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">up to IE 8</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">
+          CSS 3 pseudo element selectors (::selector)
+          <br/><br/>
+          Replace every double colon selector (::selector)
+          with a single colon one (:selector).
+          <br/><br/>
+          We recommend to use
+          <a class="link" href="https://www.npmjs.com/package/postcss-pseudoelements" >postcss-pseudoelements</a>
+          postcss plugin to automate this task.
+        </div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">up to IE 8</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">
+          Border radius
+          <br/><br/>
+          Accept the square corners or add the
+          <a class="link" href="http://css3pie.com/" >css3pie</a>
+          polyfill. Note that this polyfill may slow
+          down the page rendering on IE 8.
+        </div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">up to IE 8</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">
+          Background size
+          <br/><br/>
+          Add the
+          <a class="link" href="https://github.com/louisremi/background-size-polyfill" >background-size-polyfill</a>
+          to support this property in IE 7/8.
+        </div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">up to IE 8</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">
+          jQuery
+          <br/><br/>
+          jQuery 2.0 dropped support for IE 8 in favour
+          of a major performance boost. Use the 1.x Version
+          instead to support IE 8.
+        </div>
+      </td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__row__item">
+        <div class="table__row__item__content">-</div>
+      </td>
+      <td class="table__row__item">
+        <div class="table__row__item__content">
+          Other
+          <br/><br/>
+          Use
+          <a class="link" href="http://caniuse.com" >caniuse.com</a>
+          to look up browser support for a specific feature.
+          <br/><br/>
+          Take a look at the
+          <a class="link" href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" >Modernizr wiki</a>
+          to find further polyfills.
+          
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script>
+  google.setOnLoadCallback(drawCharts);
+  function drawCharts() {
+    var androidData = google.visualization.arrayToDataTable([
+      ['Android Version', 'Visits'],
+      ['5.x',     3532],
+      ['4.x',      6321],
+      ['older',  147]
+    ]);
+    
+    var iosData = google.visualization.arrayToDataTable([
+      ['iOS Version', 'Visits'],
+      ['8.x',     8249],
+      ['7.x',      1504],
+      ['older',  246]
+    ]);
+    
+    $('.docs-chart-container').addClass('is-active');
+    var androidChart = new google.visualization.PieChart(document.getElementById('android-piechart'));
+    var iosChart = new google.visualization.PieChart(document.getElementById('ios-piechart'));
+    
+    androidChart.draw(androidData, { title: 'Android Version Share' });
+    iosChart.draw(iosData, { title: 'iOS Version Share' });
+  }
+  
+</script></div></div></div></div><footer class="footer"><div class="footer__content"></div><div class="footer__copyline"><div class="l-container"><ul class="menu menu--copyline"><li class="menu__item"><a href="../../changelog.html" class="menu__link">Changelog</a></li><li class="menu__item"><span class="menu__link">© AXA Versicherungen AG 2015</span></li></ul></div></div></footer></div><script type="text/javascript">//// Set the right mobile menu level as current
+//var $menu = $("#menu-mobile");
+//var $level = $menu.find("[data-link='/fundamentals/code/browser-support.html']").closest('.menu__level');
+//
+//$menu.slidingMenu();
+//$menu.slidingMenu('level', $level);
+//
+//// Highlight the right mobile menu link as active
+//$menu.find("[data-link='/fundamentals/code/browser-support.html']").addClass('is-active')
+</script></body></html>

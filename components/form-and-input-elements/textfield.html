@@ -1,0 +1,436 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><meta name="description" content="AXA Switzerland Web Style Guide"><meta name="keywords" content="axa,switzerland,versicherungen,web,style,guide"><meta name="author" content="AXA Versicherungen AG"><!-- iOS app icon--><link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../images/app-icon/ios/57x57.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/app-icon/ios/72x72.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../images/app-icon/ios/76x76.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/app-icon/ios/114x114.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../images/app-icon/ios/120x120.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/app-icon/ios/144x144.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../images/app-icon/ios/152x152.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="../../images/app-icon/ios/180x180.png"><meta name="apple-mobile-web-app-title" content="Web Style Guide"><link media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" href="../../images/splash-screen/ios/750x1294.png"><!-- android/chrome app iocn--><link rel="manifest" href="../../content/manifest.json"><link rel="icon" sizes="192x192" href="../../images/app-icon/android/192x192.png"><meta name="mobile-web-app-capable" content="yes"><!-- windows tiles--><meta name="application-name" content="Web Style Guide"><meta name="msapplication-square70x70logo" content="../../images/app-icon/windows/128x128.png"><meta name="msapplication-square150x150logo" content="../../images/app-icon/windows/270x270.png"><meta name="msapplication-wide310x150logo" content="../../images/app-icon/windows/558x270.png"><meta name="msapplication-square310x310logo" content="../../images/app-icon/windows/558x558.png"><title>Textfield | Web Style Guide</title><link rel="stylesheet" href="//fast.fonts.net/cssapi/1da4c08a-73a4-4e34-8997-1c1eeb1a8cca.css"><link rel="stylesheet" href="../../css/normalize.min.css"><link rel="stylesheet" href="../../css/docs.min.css"><script src="../../js/docs.all.min.js"></script><script src="//www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script><script>// Set the locale for momentjs used in the datepicker
+moment.locale('en_GB')
+    </script><script>// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];
+UserVoice.push(['set', {
+  accent_color: '#103184',
+  screenshot_enabled: false
+}]);
+(function(){
+  var uv=document.createElement('script');
+  uv.type='text/javascript';
+  uv.async=true;
+  uv.src='//widget.uservoice.com/O8ex403PfbC0GjKz3DuQ.js';
+  var s=document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(uv,s)
+})();
+</script></head><body class="site"><div class="site__page"><div id="notification" data-notification-info="../../images/icons.svg#info" data-notification-success="../../images/icons.svg#checkmark" data-notification-error="../../images/icons.svg#cross" class="notifications"></div><div class="l-container"><div class="docs-floating-action"><a href="#feedback" data-uv-trigger class="docs-floating-action__button button button--floating"><svg class="button__icon icon-svg"><use xlink:href="../../images/icons.svg#feedback"></use></svg></a></div></div><header class="header"><div class="header__meta"><div class="header__meta__content"><div class="header__meta__item header__meta__search autocomplete search search--header"><input type="text" data-search data-search-index-data="../../searchIndex.json" data-search-base-url="../.." class="autocomplete__input search__input search--header"><svg class="search__icon search--header icon-svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../images/icons.svg#search"></use></svg></div><a href="https://github.com/axa-ch/style-guide" class="header__meta__item header__meta__action"><svg class="button__icon icon-svg button__icon--left"><use xlink:href="../../images/icons.svg#github"></use></svg>View on GitHub</a></div></div><div class="header__main"><div class="header__main__content"><a href="../../index.html" class="header__brand brand"><span class="brand__logo"></span></a><div class="header__menu"><ul class="menu menu--main"><li class="menu__item"><a href="../../fundamentals.html" class="menu__link">Fundamentals</a></li><li class="menu__item is-active"><a href="../../components.html" class="menu__link">Components</a></li><li class="menu__item"><a href="../../patterns.html" class="menu__link">UI Patterns</a></li></ul></div><a href="#" class="header__main__mobile-trigger"><svg class="header__main__mobile-icon"><use xlink:href="../../images/icons.svg#burger"></use></svg></a></div></div></header><div class="page-content l-container"><div class="l-row"><nav class="l-col l-col--medium-2"><ul class="left__menu menu menu--left"><li class="menu__item"><a href="../form-and-input-elements.html" class="menu__link is-active is-open">Form &amp; input elements<div class="menu__dropdown__icon is-open"><svg class="menu__dropdown__icon__is-closed icon-svg"><use xlink:href="../../images/icons.svg#arrow-right"></use></svg><svg class="menu__dropdown__icon__is-open icon-svg"><use xlink:href="../../images/icons.svg#arrow-bottom"></use></svg></div></a><ul class="menu__level is-open"><li class="menu__item"><a href="captcha.html" class="menu__link">Captcha and honeypot</a></li><li class="menu__item"><a href="checkbox.html" class="menu__link">Checkbox</a></li><li class="menu__item"><a href="datepicker.html" class="menu__link">Datepicker</a></li><li class="menu__item"><a href="dropdown.html" class="menu__link">Dropdown</a></li><li class="menu__item"><a href="fileupload.html" class="menu__link">File Upload</a></li><li class="menu__item"><a href="form-group.html" class="menu__link">Form group</a></li><li class="menu__item"><a href="progresstracker.html" class="menu__link">Progresstracker</a></li><li class="menu__item"><a href="radiobuttons.html" class="menu__link">Radio buttons</a></li><li class="menu__item"><a href="segmented-control.html" class="menu__link">Segmented control</a></li><li class="menu__item"><a href="textfield.html" class="menu__link is-active is-open">Textfield</a></li></ul></li><li class="menu__item"><a href="../activityIndicators.html" class="menu__link">Activity Indicators</a></li><li class="menu__item"><a href="../badge.html" class="menu__link">Badge</a></li><li class="menu__item"><a href="../button.html" class="menu__link">Button</a></li><li class="menu__item"><a href="../footer.html" class="menu__link">Footer</a></li><li class="menu__item"><a href="../header.html" class="menu__link">Header</a></li><li class="menu__item"><a href="../modal.html" class="menu__link">Modal</a></li><li class="menu__item"><a href="../notification.html" class="menu__link">Notification</a></li></ul></nav><div class="l-col l-col--medium-10"><h1 class="heading heading--page">Textfield</h1><div>
+<p class="paragraph">
+  Basic input element. Use the single-line text field for entering basic values, such as a name, number or short phrase. For a longer text use a multi-line text field.
+  
+</p>
+<div class="toc">
+  <div class="toc__title">Table of contents</div>
+  <ul class="toc__anchor-navigation">
+    <li class="toc__anchor-navigation__item"><a href="#single" class="toc__anchor-navigation__link">Single-line text field</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#autocomplete" class="toc__anchor-navigation__link">Auto-complete text-field</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#chips" class="toc__anchor-navigation__link">Chips</a></li>
+    <li class="toc__anchor-navigation__item"><a href="#multiline" class="toc__anchor-navigation__link">Multi-line text field</a></li>
+  </ul>
+</div>
+<h3 class="heading heading--tertiary">UX Checklist</h3>
+<ul class="checklist">
+  <li class="checklist__item">
+    <svg class="checklist__item__icon icon-svg">
+      <use xlink:href="../../images/icons.svg#checkmark"></use>
+    </svg>
+    <div class="checklist__item__content">Only use Placeholder text if absolutely necessary . Placeholder text must not be used to replace a proper label .</div>
+  </li>
+  <li class="checklist__item">
+    <svg class="checklist__item__icon icon-svg">
+      <use xlink:href="../../images/icons.svg#checkmark"></use>
+    </svg>
+    <div class="checklist__item__content">Make sure that on mobile a user can make use of the optimized keyboard layouts for different text types (phone,email,etc.).</div>
+  </li>
+  <li class="checklist__item">
+    <svg class="checklist__item__icon icon-svg">
+      <use xlink:href="../../images/icons.svg#checkmark"></use>
+    </svg>
+    <div class="checklist__item__content">
+      If a field has a maximum  length in which the user probably will run into, add a signifier that shows how many characters are left.
+      
+    </div>
+  </li>
+</ul>
+<div class="hr"></div>
+<h2 id="single" class="heading heading--secondary">Single-line text field</h2>
+<p class="paragraph">The most common form of a text field.</p>
+<div class="example">
+  <div class="example__header">
+    <div class="example__device-selection"><a class="example__device-selection__device example__device-selection__mobile">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#mobile"></use>
+          </svg></a><a class="example__device-selection__device example__device-selection__tablet">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#tablet"></use>
+          </svg></a><a class="example__device-selection__device example__device-selection__desktop is-active">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#desktop"></use>
+          </svg></a></div>
+  </div>
+  <div class="example__content">
+    <div class="example__border">
+      <iframe src="demos/textfield.html" data-iframe-resizer="data-iframe-resizer" class="example__iframe"></iframe>
+    </div>
+  </div>
+</div>
+<div class="toggle">
+  <div data-info="data-info" data-target="#code-single" class="toggle__button">
+      <svg class="icon-svg toggle__icon">
+        <use xlink:href="../../images/icons.svg#source"></use>
+      </svg><span>See code</span>
+  </div>
+  <div id="code-single" class="toggle__content">
+    <div data-tab="data-tab" data-tab-default="html" class="tab-panel">
+      <div class="tab-panel__header">
+        <div class="tab-panel__header__tabs">
+          <div data-tab-toggle="html" class="tab-panel__header__tab">HTML</div>
+        </div>
+      </div>
+      <div class="tab-panel__content">
+        <div data-tab-content="html" class="tab-panel__content__tab">
+          <p class="paragraph">
+            In the example the input field is embedded into a
+            <a class="link" href="./form-group.html">Form Group</a>,
+            but the control block is independent.
+          </p>
+          <div class="tab-panel__content__tab__fullwidth-content">
+            <div class="highlight">
+              <pre class="highlight__listing hljs"><code class="js"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"l-container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__label"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__label__text"</span>&gt;</span>Form label<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__control"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"control control--input"</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hr"></div>
+<h2 id="autocomplete" class="heading heading--secondary">Auto-complete text field</h2>
+<p class="paragraph">
+  Use the auto-complete feature to provide real-time completions in dropdowns to enhance accuracy and efficiency.  Use auto-complete instead of extreme long dropdown fields (country list).
+  
+</p>
+<div class="example">
+  <div class="example__header">
+    <div class="example__device-selection"><a class="example__device-selection__device example__device-selection__mobile">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#mobile"></use>
+          </svg></a><a class="example__device-selection__device example__device-selection__tablet">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#tablet"></use>
+          </svg></a><a class="example__device-selection__device example__device-selection__desktop is-active">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#desktop"></use>
+          </svg></a></div>
+  </div>
+  <div class="example__content">
+    <div class="example__border">
+      <iframe src="demos/textfield-autocomplete.html" data-iframe-resizer="data-iframe-resizer" class="example__iframe"></iframe>
+    </div>
+  </div>
+</div>
+<div class="toggle">
+  <div data-info="data-info" data-target="#code-autocomplete" class="toggle__button">
+      <svg class="icon-svg toggle__icon">
+        <use xlink:href="../../images/icons.svg#source"></use>
+      </svg><span>See code</span>
+  </div>
+  <div id="code-autocomplete" class="toggle__content">
+    <div data-tab="data-tab" data-tab-default="html" class="tab-panel">
+      <div class="tab-panel__header">
+        <div class="tab-panel__header__tabs">
+          <div data-tab-toggle="html" class="tab-panel__header__tab">HTML</div>
+          <div data-tab-toggle="js" class="tab-panel__header__tab">JavaScript</div>
+        </div>
+      </div>
+      <div class="tab-panel__content">
+        <div data-tab-content="html" class="tab-panel__content__tab">
+          <p class="paragraph">
+            The following markup is used for the
+            autocomplete control. Use Javascript to toggle
+            and filter the suggestions element. You can
+            also use our jQuery plugin to do it for you.
+          </p>
+          <div class="tab-panel__content__tab__fullwidth-content">
+            <div class="highlight">
+              <pre class="highlight__listing hljs"><code class="js"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"autocomplete"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"control control--input"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"autocomplete__suggestions"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"autocomplete__suggestions__item autocomplete__suggestions__item--selected"</span>&gt;</span>8000 Zürich<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"autocomplete__suggestions__item"</span>&gt;</span>8400 Winterthur<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"autocomplete__suggestions__item"</span>&gt;</span>8472 Seuzach<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div data-tab-content="js" class="tab-panel__content__tab">
+          <p class="paragraph">Use the jQuery plugin as follows:</p>
+          <div class="tab-panel__content__tab__fullwidth-content">
+            <div class="highlight">
+              <pre class="highlight__listing hljs"><code class="js"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"autocomplete"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"cities-autocomplete"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"control control--input"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-string">'#cities-autocomplete'</span>).autocomplete({
+    source: [<span class="hljs-string">'8000 Zürich'</span>, <span class="hljs-string">'8400 Winterthur'</span>, <span class="hljs-string">'8472 Seuzach'</span>]});
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+            </div>
+          </div>
+          <p class="paragraph">
+            If you implement your own solution use the
+            CSS property <code>display: block;</code> to
+            toggle the <code>suggestions</code> element.
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 class="heading heading--tertiary">UX Checklist</h3>
+<ul class="checklist">
+  <li class="checklist__item">
+      <svg class="checklist__item__icon icon-svg">
+        <use xlink:href="../../images/icons.svg#checkmark"></use>
+      </svg>
+    <div class="checklist__item__content">Analyse search statistics and optimize the algorithm to match your users search behaviour.</div>
+  </li>
+  <li class="checklist__item">
+      <svg class="checklist__item__icon icon-svg">
+        <use xlink:href="../../images/icons.svg#checkmark"></use>
+      </svg>
+    <div class="checklist__item__content">E.g. if a name is searched: John Doe and Doe John should both be valid entries.</div>
+  </li>
+  <li class="checklist__item">
+      <svg class="checklist__item__icon icon-svg">
+        <use xlink:href="../../images/icons.svg#checkmark"></use>
+      </svg>
+    <div class="checklist__item__content">
+      depending on the amount of possible results, start suggesting  options after entering the first or the third character.
+      
+    </div>
+  </li>
+</ul>
+<div class="hr"></div>
+<h2 id="chips" class="heading heading--secondary">Chips</h2>
+<p class="paragraph">
+  A chips element is used to allow multiple selections out of a long list.
+  
+</p>
+<div class="example">
+  <div class="example__header">
+    <div class="example__device-selection"><a class="example__device-selection__device example__device-selection__mobile">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#mobile"></use>
+          </svg></a><a class="example__device-selection__device example__device-selection__tablet">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#tablet"></use>
+          </svg></a><a class="example__device-selection__device example__device-selection__desktop is-active">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#desktop"></use>
+          </svg></a></div>
+  </div>
+  <div class="example__content">
+    <div class="example__border">
+      <iframe src="demos/textfield-chips.html" data-iframe-resizer="data-iframe-resizer" class="example__iframe"></iframe>
+    </div>
+  </div>
+</div>
+<div class="toggle">
+  <div data-info="data-info" data-target="#code-chips" class="toggle__button">
+      <svg class="icon-svg toggle__icon">
+        <use xlink:href="../../images/icons.svg#source"></use>
+      </svg><span>See code</span>
+  </div>
+  <div id="code-chips" class="toggle__content">
+    <div data-tab="data-tab" data-tab-default="html" class="tab-panel">
+      <div class="tab-panel__header">
+        <div class="tab-panel__header__tabs">
+          <div data-tab-toggle="html" class="tab-panel__header__tab">HTML</div>
+          <div data-tab-toggle="js" class="tab-panel__header__tab">JavaScript</div>
+        </div>
+      </div>
+      <div class="tab-panel__content">
+        <div data-tab-content="html" class="tab-panel__content__tab">
+          <p class="paragraph">
+            The following markup is used for the
+            chips control. Use Javascript to toggle
+            and filter the autocomplete-list.
+          </p>
+          <div class="tab-panel__content__tab__fullwidth-content">
+            <div class="highlight">
+              <pre class="highlight__listing hljs"><code class="js"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"l-container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__label"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__label__text"</span>&gt;</span>Form label<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__control"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__field"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__text"</span>&gt;</span>Foo<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__close-button"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__close-button__icon icon-svg"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"/images/icons.svg#cross"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__text"</span>&gt;</span>Bar<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__close-button"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__close-button__icon icon-svg"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"/images/icons.svg#cross"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__text"</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__close-button"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__chip__close-button__icon icon-svg"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-title">use</span> <span class="hljs-attribute">xlink:href</span>=<span class="hljs-value">"/images/icons.svg#cross"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">use</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__input"</span>/&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"chips__autocomplete autocomplete__suggestions"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"autocomplete__suggestions__item"</span>&gt;</span>8400 Winterthur<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"autocomplete__suggestions__item"</span>&gt;</span>8472 Seuzach<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 class="heading heading--tertiary">UX Checklist</h3>
+<ul class="checklist">
+  <li class="checklist__item">
+      <svg class="checklist__item__icon icon-svg">
+        <use xlink:href="../../images/icons.svg#checkmark"></use>
+      </svg>
+    <div class="checklist__item__content"><p class="paragraph">Do not use for lists with 10 or less items. Use a <a href="./checkbox.html#group" class="link">checkbox group</a> in this case.</p>
+    </div>
+  </li>
+</ul>
+<div class="hr"></div>
+<h2 id="multiline" class="heading heading--secondary">Multi-line text field</h2>
+<p class="paragraph">
+  Used whenever more than just a few words should be entered.
+  
+</p>
+<div class="example">
+  <div class="example__header">
+    <div class="example__device-selection"><a class="example__device-selection__device example__device-selection__mobile">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#mobile"></use>
+          </svg></a><a class="example__device-selection__device example__device-selection__tablet">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#tablet"></use>
+          </svg></a><a class="example__device-selection__device example__device-selection__desktop is-active">
+          <svg class="icon-svg example__device-selection__icon">
+            <use xlink:href="../../images/icons.svg#desktop"></use>
+          </svg></a></div>
+  </div>
+  <div class="example__content">
+    <div class="example__border">
+      <iframe src="demos/textfield-multiline.html" data-iframe-resizer="data-iframe-resizer" class="example__iframe"></iframe>
+    </div>
+  </div>
+</div>
+<div class="toggle">
+  <div data-info="data-info" data-target="#code-multiline" class="toggle__button">
+      <svg class="icon-svg toggle__icon">
+        <use xlink:href="../../images/icons.svg#source"></use>
+      </svg><span>See code</span>
+  </div>
+  <div id="code-multiline" class="toggle__content">
+    <div data-tab="data-tab" data-tab-default="html" class="tab-panel">
+      <div class="tab-panel__header">
+        <div class="tab-panel__header__tabs">
+          <div data-tab-toggle="html" class="tab-panel__header__tab">HTML</div>
+          <div data-tab-toggle="js" class="tab-panel__header__tab">JavaScript</div>
+        </div>
+      </div>
+      <div class="tab-panel__content">
+        <div data-tab-content="html" class="tab-panel__content__tab">
+          <p class="paragraph">
+            The autogrow control is supposed to grow, as
+            the user types. Use the <code>autogrow</code>
+            plugin to achieve this.
+          </p>
+          <div class="tab-panel__content__tab__fullwidth-content">
+            <div class="highlight">
+              <pre class="highlight__listing hljs"><code class="js"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"l-container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__label"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__label__text"</span>&gt;</span>Form label<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form__group__control"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">data-autogrow</span>=<span class="hljs-value">"autogrow"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"control control--textarea"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div data-tab-content="js" class="tab-panel__content__tab">
+          <p class="paragraph">Use the jQuery plugin as follows:</p>
+          <div class="tab-panel__content__tab__fullwidth-content">
+            <div class="highlight">
+              <pre class="highlight__listing hljs"><code class="js">&lt;textarea <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"text"</span> data-autogrow=<span class="hljs-string">"autogrow"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"control control--textarea"</span>&gt;&lt;/textarea&gt;</code></pre>
+            </div>
+          </div>
+          <p class="paragraph">
+            We create a shadow copy of the component to
+            measure it's dimensions and then set the size
+            on the original.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 class="heading heading--tertiary">UX Checklist</h3>
+<ul class="checklist">
+  <li class="checklist__item">
+      <svg class="checklist__item__icon icon-svg">
+        <use xlink:href="../../images/icons.svg#checkmark"></use>
+      </svg>
+    <div class="checklist__item__content">Start with a small text field and let it grow as soon as the user enters more lines. Add a max height to prevent huge text fields.</div>
+  </li>
+  <li class="checklist__item">
+      <svg class="checklist__item__icon icon-svg">
+        <use xlink:href="../../images/icons.svg#checkmark"></use>
+      </svg>
+    <div class="checklist__item__content">
+      Do not use multi-line text fields in combination with Chips or Autocomplete.
+      
+    </div>
+  </li>
+</ul></div></div></div></div><footer class="footer"><div class="footer__content"></div><div class="footer__copyline"><div class="l-container"><ul class="menu menu--copyline"><li class="menu__item"><a href="../../changelog.html" class="menu__link">Changelog</a></li><li class="menu__item"><span class="menu__link">© AXA Versicherungen AG 2015</span></li></ul></div></div></footer></div><script type="text/javascript">//// Set the right mobile menu level as current
+//var $menu = $("#menu-mobile");
+//var $level = $menu.find("[data-link='/components/form-and-input-elements/textfield.html']").closest('.menu__level');
+//
+//$menu.slidingMenu();
+//$menu.slidingMenu('level', $level);
+//
+//// Highlight the right mobile menu link as active
+//$menu.find("[data-link='/components/form-and-input-elements/textfield.html']").addClass('is-active')
+</script></body></html>
